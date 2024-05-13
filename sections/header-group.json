@@ -1,0 +1,19 @@
+{
+    "sections": {
+        "announcement": {
+            "type": "announcement",
+            "settings": {
+                "show": false
+            }
+        },
+        "header": {
+            "type": "header",
+            "available_types": [],
+            "settings": {}
+        }
+    },
+    "order": [
+        "announcement",
+        "header"
+    ]
+}

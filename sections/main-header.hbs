@@ -1,0 +1,434 @@
+{{{styles}}}
+header .widget_esmee_core_woo_dropdown_cart.active .qodef-widget-dropdown-cart-content {
+opacity: 1 !important;
+visibility: visible !important;
+}
+{{{endstyles}}}
+<header id="qodef-page-header" role="banner">
+    <div id="qodef-page-header-inner"
+        class="{{#ifCond page '!=' 'index'}} qodef-skin--dark {{else}} qodef-skin--light {{/ifCond}}">
+        <div class="qodef-divided-header-left-wrapper">
+            <nav class="qodef-header-navigation" role="navigation" aria-label="Divided Left Menu">
+                <ul id="menu-main-menu-1" class="menu">
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-49 qodef--hide-link qodef-menu-item--narrow">
+                        <a href="/"><span class="qodef-menu-item-text">Home<svg class="qodef-menu-item-arrow"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="32" height="32" viewBox="0 0 32 32">
+                                    <g>
+                                        <path
+                                            d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-793 qodef-menu-item--narrow">
+                        <a href="/shop"><span class="qodef-menu-item-text">Shop All<svg class="qodef-menu-item-arrow"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="32" height="32" viewBox="0 0 32 32">
+                                    <g>
+                                        <path
+                                            d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52 qodef-menu-item--narrow">
+                        <a href="#"><span class="qodef-menu-item-text">Categories<svg class="qodef-menu-item-arrow"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="32" height="32" viewBox="0 0 32 32">
+                                    <g>
+                                        <path
+                                            d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                        </path>
+                                    </g>
+                                </svg></span></a>
+                        <div class="qodef-drop-down-second">
+                            <div class="qodef-drop-down-second-inner">
+                                <ul class="sub-menu">
+                                    {{#each store.collections}}
+                                    {{#ifCond this.categories.length '>' 0}}
+                                    <li
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-96">
+                                        <a href="/collections/{{this.slug}}"><span
+                                                class="qodef-menu-item-text">{{this.name}}<svg
+                                                    class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                                    viewBox="0 0 32 32">
+                                                    <g>
+                                                        <path
+                                                            d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                                        </path>
+                                                    </g>
+                                                </svg></span></a>
+                                        <ul class="sub-menu">
+                                            {{#each this.categories}}
+                                            <li
+                                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2405">
+                                                <a href="{{this.slug}}"><span
+                                                        class="qodef-menu-item-text">{{this.name}}</span></a>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                    </li>
+                                    {{else}}
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2408">
+                                        <a href="/collections/{{this.slug}}"><span
+                                                class="qodef-menu-item-text">{{this.name}}</span></a>
+                                    </li>
+                                    {{/ifCond}}
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52 qodef-menu-item--narrow">
+                        <a href="/blog">
+                            <span class="qodef-menu-item-text">Blog<svg class="qodef-menu-item-arrow"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="32" height="32" viewBox="0 0 32 32">
+                                    <g>
+                                        <path
+                                            d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <a itemprop="url" class="qodef-header-logo-link qodef-height--set qodef-source--image" href="/" rel="home">
+            <img width="330" height="96" src="{{store.logo}}" class="qodef-header-logo-image qodef--main"
+                alt="{{store.name}}" itemprop="image" srcset="{{store.logo}} 330w, {{ store.logo}} 300w"
+                sizes="(max-width: 330px) 100vw, 330px" /><img width="330" height="96" src="{{store.logo}}"
+                class="qodef-header-logo-image qodef--dark" alt="{{store.name }}" itemprop="image"
+                srcset="{{store.logo}} 330w, {{store.logo}} 300w" sizes="(max-width: 330px) 100vw, 330px" /><img
+                width="330" height="96" src="{{store.logo}}" class="qodef-header-logo-image qodef--light"
+                alt="{{store.name }}" itemprop="image" srcset="{{store.logo}} 330w, {{store.logo}} 300w"
+                sizes="(max-width: 330px) 100vw, 330px" /></a>
+        <div class="qodef-divided-header-right-wrapper">
+            <div class="qodef-widget-holder qodef--one">
+                <div id="esmee_core_yith_wishlist-2"
+                    class="widget widget_esmee_core_yith_wishlist qodef-header-widget-area-one"
+                    data-area="header-widget-one">
+                    <div class="widget qodef-wishlist-widget-holder">
+                        <div class="qodef-wishlist-inner">
+                            <a href="/account/wishlist" class="qodef-wishlist-widget-link" title="View Wishlist">
+                                <h6 class="qodef-m-wishlist-icon">Wishlist</h6>
+                                <h6 class="qodef-m-wishlist-count">(<span
+                                        class="qodef-m-wishlist-actual-count">0</span>)</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="esmee_core_woo_dropdown_cart-2"
+                    class="widget widget_esmee_core_woo_dropdown_cart qodef-header-widget-area-one cart-summary"
+                    data-area="header-widget-one">
+                    <div class="qodef-widget-dropdown-cart-inner">
+                        <a itemprop="url" class="qodef-m-opener" href="/cart">
+                            <span class="qodef-m-svg-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.2px"
+                                    height="15.8px" viewBox="0 0 17.2 15.8" enable-background="new 0 0 17.2 15.8"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path fill="none" stroke="#000000" stroke-width="1.2" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-miterlimit="10" d="
+		M16.35,7.224c0,4.28-3.47,7.75-7.75,7.75s-7.75-3.47-7.75-7.75H16.35z" />
+                                        <path fill="none" stroke="#000000" stroke-width="1.2" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-miterlimit="10" d="
+		M12.893,4.045C12.338,2.188,10.637,0.826,8.6,0.826S4.862,2.188,4.307,4.045" />
+                                    </g>
+                                </svg></span>
+                            <h6 class="qodef-m-opener-icon">Cart</h6>
+                            <h6 class="qodef-m-opener-count cart-count">{{{component "cart-count"}}}</h6>
+                        </a>
+
+                        <div class="cart-summary-wrapper">
+                            {{{component 'cart-summary'}}}
+                        </div>
+                    </div>
+                </div>
+
+                <div id="esmee_core_search_opener-2"
+                    class="widget widget_esmee_core_search_opener qodef-header-widget-area-one"
+                    data-area="header-widget-one"><a href="javascript:void(0)"
+                        class="qodef-opener-icon qodef-m qodef-source--svg-path qodef-search-opener">
+                        <span class="qodef-m-icon qodef--open">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" width="16.4px" height="16.4px" viewBox="0 0 16.4 16.4"
+                                enable-background="new 0 0 16.4 16.4" xml:space="preserve">
+                                <g>
+                                    <circle fill="none" stroke="#000000" stroke-width="1.2" cx="6.441" cy="6.482"
+                                        r="5.75" />
+                                    <line fill="none" stroke="#000000" stroke-width="1.2" stroke-linecap="round"
+                                        stroke-linejoin="round" x1="10.57" y1="10.484" x2="15.709" y2="15.668" />
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div id="esmee_core_side_area_opener-3"
+                    class="widget widget_esmee_core_side_area_opener qodef-header-widget-area-one"
+                    data-area="header-widget-one"><a href="javascript:void(0)"
+                        class="qodef-opener-icon qodef-m qodef-source--svg-path qodef-side-area-opener"
+                        style="margin: 0 -28px 0 0px">
+                        <span class="qodef-m-icon qodef--open">
+                            <svg class="qodef-custom-svg-open" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26px" height="11px"
+                                viewBox="0 0 26 11" enable-background="new 0 0 26 11" xml:space="preserve">
+                                <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="0" y1="5.5" x2="26"
+                                    y2="5.5" />
+                                <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="0" y1="0.5" x2="26"
+                                    y2="0.5" />
+                                <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="0" y1="10.5" x2="26"
+                                    y2="10.5" />
+                            </svg> </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="qodef-header-sticky">
+        <div class="qodef-header-sticky-inner ">
+            <div class="qodef-divided-header-left-wrapper">
+                <nav class="qodef-header-navigation" role="navigation" aria-label="Divided Left Menu">
+                    <ul id="menu-main-menu-2" class="menu">
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-49 qodef--hide-link qodef-menu-item--narrow">
+                            <a href="/">
+                                <span class="qodef-menu-item-text">Home
+                                    <svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                        viewBox="0 0 32 32">
+                                        <g>
+                                            <path
+                                                d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-793 qodef--hide-link qodef-menu-item--wide">
+                            <a href="/shop">
+                                <span class="qodef-menu-item-text">Shop
+                                    All<svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                        viewBox="0 0 32 32">
+                                        <g>
+                                            <path
+                                                d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50 qodef--hide-link qodef-menu-item--narrow">
+                            <a href="#">
+                                <span class="qodef-menu-item-text">Categories
+                                    <svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                        viewBox="0 0 32 32">
+                                        <g>
+                                            <path
+                                                d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                            <div class="qodef-drop-down-second">
+                                <div class="qodef-drop-down-second-inner">
+                                    <ul class="sub-menu">
+                                        {{#each store.collections}}
+                                        {{#ifCond this.categories.length '>' 0}}
+                                        <li
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-96">
+                                            <a href="/collections/{{this.slug}}"><span
+                                                    class="qodef-menu-item-text">{{this.name}}<svg
+                                                        class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="32"
+                                                        height="32" viewBox="0 0 32 32">
+                                                        <g>
+                                                            <path
+                                                                d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                                            </path>
+                                                        </g>
+                                                    </svg></span></a>
+                                            <ul class="sub-menu">
+                                                {{#each this.categories}}
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2405">
+                                                    <a href="{{this.slug}}"><span
+                                                            class="qodef-menu-item-text">{{this.name}}</span></a>
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                        </li>
+                                        {{else}}
+                                        <li
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2408">
+                                            <a href="/collections/{{this.slug}}"><span
+                                                    class="qodef-menu-item-text">{{this.name}}</span></a>
+                                        </li>
+                                        {{/ifCond}}
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52 qodef-menu-item--narrow">
+                            <a href="/blog">
+                                <span class="qodef-menu-item-text">Blog
+                                    <svg class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                        viewBox="0 0 32 32">
+                                        <g>
+                                            <path
+                                                d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <a itemprop="url" class="qodef-header-logo-link qodef-height--set qodef-source--image" href="/" rel="home">
+                <img width="330" height="96" src="{{store.logo}}" class="qodef-header-logo-image qodef--main"
+                    alt="logo main" itemprop="image" srcset="{{store.logo}} 330w, {{store.logo}} 300w"
+                    sizes="(max-width: 330px) 100vw, 330px" /></a>
+            <div class="qodef-divided-header-right-wrapper">
+                <div class="qodef-widget-holder qodef--one">
+                    <div id="esmee_core_yith_wishlist-5"
+                        class="widget widget_esmee_core_yith_wishlist qodef-sticky-right">
+                        <div class="widget qodef-wishlist-widget-holder">
+                            <div class="qodef-wishlist-inner">
+                                <a href="/account/wishlist" class="qodef-wishlist-widget-link" title="View Wishlist">
+                                    <h6 class="qodef-m-wishlist-icon">Wishlist</h6>
+                                    <h6 class="qodef-m-wishlist-count">(<span
+                                            class="qodef-m-wishlist-actual-count">0</span>)</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="esmee_core_woo_dropdown_cart-7"
+                        class="widget widget_esmee_core_woo_dropdown_cart qodef-sticky-right">
+                        <div class="qodef-widget-dropdown-cart-inner">
+                            <a itemprop="url" class="qodef-m-opener" href="/cart">
+                                <span class="qodef-m-svg-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px" y="0px" width="17.2px" height="15.8px" viewBox="0 0 17.2 15.8"
+                                        enable-background="new 0 0 17.2 15.8" xml:space="preserve">
+                                        <g>
+                                            <path fill="none" stroke="#000000" stroke-width="1.2" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-miterlimit="10" d="
+            M16.35,7.224c0,4.28-3.47,7.75-7.75,7.75s-7.75-3.47-7.75-7.75H16.35z" />
+                                            <path fill="none" stroke="#000000" stroke-width="1.2" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-miterlimit="10" d="
+            M12.893,4.045C12.338,2.188,10.637,0.826,8.6,0.826S4.862,2.188,4.307,4.045" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <h6 class="qodef-m-opener-icon">Cart</h6>
+                                <h6 class="qodef-m-opener-count cart-count">{{{component "cart-count"}}}</h6>
+                            </a>
+
+                            <div class="cart-summary-wrapper">
+                                {{{component 'cart-summary'}}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="esmee_core_search_opener-4"
+                        class="widget widget_esmee_core_search_opener qodef-sticky-right"><a href="javascript:void(0)"
+                            class="qodef-opener-icon qodef-m qodef-source--svg-path qodef-search-opener">
+                            <span class="qodef-m-icon qodef--open">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" width="16.4px" height="16.4px" viewBox="0 0 16.4 16.4"
+                                    enable-background="new 0 0 16.4 16.4" xml:space="preserve">
+                                    <g>
+                                        <circle fill="none" stroke="#000000" stroke-width="1.2" cx="6.441" cy="6.482"
+                                            r="5.75" />
+                                        <line fill="none" stroke="#000000" stroke-width="1.2" stroke-linecap="round"
+                                            stroke-linejoin="round" x1="10.57" y1="10.484" x2="15.709" y2="15.668" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div id="esmee_core_side_area_opener-4"
+                        class="widget widget_esmee_core_side_area_opener qodef-sticky-right">
+                        <a href="javascript:void(0)"
+                            class="qodef-opener-icon qodef-m qodef-source--svg-path qodef-side-area-opener">
+                            <span class="qodef-m-icon qodef--open">
+                                <svg class="qodef-custom-svg-open" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26px"
+                                    height="11px" viewBox="0 0 26 11" enable-background="new 0 0 26 11"
+                                    xml:space="preserve">
+                                    <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="0" y1="5.5" x2="26"
+                                        y2="5.5" />
+                                    <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="0" y1="0.5" x2="26"
+                                        y2="0.5" />
+                                    <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="0" y1="10.5" x2="26"
+                                        y2="10.5" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{{form 'search' 'class="qodef-search-cover-form"'}}}
+            <div class="qodef-m-inner">
+                <input type="text" placeholder="Search" name="keywords" class="qodef-m-form-field" autocomplete="off"
+                    required />
+                <a href="javascript:void(0)" class="qodef-opener-icon qodef-m qodef-source--svg-path qodef-m-close">
+                    <span class="qodef-m-icon ">
+                        <svg class="qodef-custom-svg-close" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="19px"
+                            viewBox="0 0 19 19" enable-background="new 0 0 19 19" xml:space="preserve">
+                            <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="1.015" y1="1.015" x2="17.985"
+                                y2="17.985" />
+                            <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="17.985" y1="1.015" x2="1.015"
+                                y2="17.985" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            {{{endform}}}
+        </div>
+    </div>
+    {{{form 'search' 'class="qodef-search-cover-form"'}}}
+    <div class="qodef-m-inner">
+        <input type="text" placeholder="Search" name="s" class="qodef-m-form-field" autocomplete="off" required />
+        <a href="javascript:void(0)" class="qodef-opener-icon qodef-m qodef-source--svg-path qodef-m-close">
+            <span class="qodef-m-icon ">
+                <svg class="qodef-custom-svg-close" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="19px"
+                    viewBox="0 0 19 19" enable-background="new 0 0 19 19" xml:space="preserve">
+                    <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="1.015" y1="1.015" x2="17.985"
+                        y2="17.985" />
+                    <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="17.985" y1="1.015" x2="1.015"
+                        y2="17.985" />
+                </svg>
+            </span>
+        </a>
+    </div>
+    {{{endform}}}
+</header>

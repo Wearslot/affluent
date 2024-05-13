@@ -1,0 +1,42 @@
+{
+    "layout": "main",
+    "sections": {
+        "hero": {
+            "type": "home-hero",
+            "settings": {
+                "type": "slideshow"
+            }
+        },
+        "featured-products": {
+            "type": "featured-products",
+            "settings": {
+                "padding_top": 10,
+                "title": "Best selling products",
+                "subtitle": "CUSTOMER FAVORITES",
+                "description" : ""
+            }
+        },
+        "featured-collections": {
+            "type": "featured-collections",
+            "settings": {
+                "title": "Simple elegance",
+                "subtitle": "SUMMER COLLECTION",
+                "description" : "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta."
+            }
+        },
+        "lastest-blog-posts": {
+            "type": "lastest-blog-posts",
+            "settings": {
+                "title": "Simple elegance",
+                "subtitle": "SUMMER COLLECTION",
+                "description" : "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta."
+            }
+        }
+    },
+    "order": [
+        "hero",
+        "featured-products",
+        "featured-collections",
+        "lastest-blog-posts"
+    ]
+}
