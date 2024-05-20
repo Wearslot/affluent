@@ -45,7 +45,7 @@ if (!customElements.get('discount-apply')) {
             this.error = this.querySelector('.error');
             this.submitButton = this.querySelector('[type="submit"]');
 
-            this.removeForm = this.querySelector('discount-remove');
+            this.removeForm = document.querySelector('discount-remove');
         }
 
         onSubmit(event) {
@@ -54,7 +54,7 @@ if (!customElements.get('discount-apply')) {
             this.activateLoadingState();
 
             const formData = new FormData(this.form);
-            formData.append('components', JSON.stringify(this.getAffectedComponents()));
+            formData.append('components', JSON.stringify(this.getAffectedComponents().map(component => component.id)));
 
             const config = fetchConfig();
             config.body = parseFormToJson(formData);
@@ -107,7 +107,7 @@ if (!customElements.get('discount-remove')) {
             this.error = this.querySelector('.error');
             this.submitButton = this.querySelector('[type="submit"]');
 
-            this.applyForm = this.querySelector('discount-apply');
+            this.applyForm = document.querySelector('discount-apply');
         }
 
         onSubmit(event) {
@@ -116,7 +116,7 @@ if (!customElements.get('discount-remove')) {
             this.activateLoadingState();
 
             const formData = new FormData(this.form);
-            formData.append('components', JSON.stringify(this.getAffectedComponents()));
+            formData.append('components', JSON.stringify(this.getAffectedComponents().map(component => component.id)));
 
             const config = fetchConfig();
             config.body = parseFormToJson(formData);
