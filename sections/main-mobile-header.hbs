@@ -46,34 +46,12 @@
     </div>
     <nav class="qodef-mobile-header-navigation" role="navigation" aria-label="Mobile Menu">
         <ul id="menu-main-menu-4" class>
-            <li
-                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-49 qodef--hide-link qodef-menu-item--narrow">
-                <a href="/"><span class="qodef-menu-item-text">Home</span></a><svg class="qodef-menu-item-arrow"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
-                    viewBox="0 0 32 32">
-                    <g>
-                        <path
-                            d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
-                        </path>
-                    </g>
-                </svg>
-            </li>
+            {{#iterate store.navigations.header_menu}}
 
-            <li
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-793 qodef--hide-link qodef-menu-item--wide">
-                <a href="/shop"><span class="qodef-menu-item-text">Shop All</span></a><svg class="qodef-menu-item-arrow"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
-                    viewBox="0 0 32 32">
-                    <g>
-                        <path
-                            d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
-                        </path>
-                    </g>
-                </svg>
-            </li>
+            {{#ifCond current.index '==' 1}}
             <li
                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52 qodef-menu-item--narrow">
-                <a href="#"><span class="qodef-menu-item-text">Categories</span></a><svg class="qodef-menu-item-arrow"
+                <a href="#"><span class="qodef-menu-item-text">Collections</span></a><svg class="qodef-menu-item-arrow"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
                     viewBox="0 0 32 32">
                     <g>
@@ -89,7 +67,7 @@
                             {{#ifCond this.categories.length '>' 0}}
                             <li
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-96">
-                                <a href="/collections/{{this.slug}}"><span
+                                <a href="/collection/{{this.slug}}"><span
                                         class="qodef-menu-item-text">{{this.name}}<svg class="qodef-menu-item-arrow"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
@@ -112,7 +90,7 @@
                             </li>
                             {{else}}
                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2408">
-                                <a href="/collections/{{this.slug}}">
+                                <a href="/collection/{{this.slug}}">
                                     <span class="qodef-menu-item-text">{{this.name}}</span>
                                 </a>
                             </li>
@@ -122,17 +100,13 @@
                     </div>
                 </div>
             </li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52 qodef-menu-item--narrow">
-                <a href="/blog"><span class="qodef-menu-item-text">Blog</span></a><svg class="qodef-menu-item-arrow"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
-                    viewBox="0 0 32 32">
-                    <g>
-                        <path
-                            d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
-                        </path>
-                    </g>
-                </svg>
+            {{/ifCond}}
+
+            <li
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49 qodef--hide-link qodef-menu-item--narrow">
+                <a href="{{current.url}}"><span class="qodef-menu-item-text">{{current.name}}</span></a>
             </li>
+            {{/iterate}}
         </ul>
     </nav>
 </header>

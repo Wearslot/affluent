@@ -1,7 +1,7 @@
 <newletter-modal>
     <div id="qodef-subscribe-popup-modal" class="qodef-sp-holder qodef-sp-prevent-cookies">
         <div class="qodef-sp-inner">
-            <a class="qodef-sp-close" href="javascript:void(0)">
+            <a href="javascript:void(0)" class="qodef-sp-close news-modal-close">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="19px" height="19px" viewBox="0 0 19 19" enable-background="new 0 0 19 19"
                     xml:space="preserve">
@@ -12,8 +12,8 @@
                 </svg> </a>
             <div class="qodef-sp-content-container">
                 <div class="qodef-sp-content">
-                    <p class="qodef-sp-subtitle">{{ settings.newsletter_pop_up_description }}</p>
-                    <h3 class="qodef-sp-title">{{ settings.newsletter_pop_up_title }}</h3>
+                    <p class="qodef-sp-subtitle">{{ settings.newsletter_popup.description.value }}</p>
+                    <h3 class="qodef-sp-title">{{ settings.newsletter_popup.title.value }}</h3>
                     <div role="form" class="wpcf7" id="wpcf7-f2931-o2" lang="en-US" dir="ltr">
                         <div class="screen-reader-response">
                             <p role="status" aria-live="polite" aria-atomic="true"></p>
@@ -52,3 +52,5 @@
         </div>
     </div>
 </newletter-modal>
+
+<script type="text/javascript" src="{{asset_url}}/js/newsletter-modal.js"></script>

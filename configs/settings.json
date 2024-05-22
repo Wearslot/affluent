@@ -1,5 +1,28 @@
 {
-    "newsletter_pop_up_image": "",
-    "newsletter_pop_up_title": "Subscribe to newsletter",
-    "newsletter_pop_up_description": "get 15% off"
+    "preset": {
+        "newsletter_popup": {
+            "image": {
+                "type": "image",
+                "value": ""
+            },
+            "title": {
+                "type": "text",
+                "value": "Subscribe to newsletter"
+            },
+            "description": {
+                "type": "text",
+                "value": "get 15% off"
+            } 
+        },
+        "footer": {
+            "text_color": {
+                "type": "color",
+                "value": ""
+            },
+            "background_color": {
+                "type": "color",
+                "value": ""
+            }
+        }
+    }
 }
