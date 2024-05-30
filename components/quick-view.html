@@ -1,0 +1,149 @@
+<style type="text/css">
+    .disabled {
+        background-color: #dcdcdc !important;
+        color: #fff;
+    }
+</style>
+
+{{#if product}}
+<div class="product">
+    <div id="product-2510"
+        class="product post-2510 type-product status-publish has-post-thumbnail product_cat-summer product_tag-variable first instock shipping-taxable purchasable product-type-variable has-default-attributes">
+
+        <div class="qodef-woo-single-inner">
+            <div class="qodef-woo-single-image">
+                <div class="taojaa-product-gallery taojaa-product-gallery--with-images taojaa-product-gallery--columns-1 images qodef-position--left"
+                    data-columns="1" style="opacity: 0; transition: opacity .25s ease-in-out;">
+                    <figure class="taojaa-product-gallery__wrapper">
+                        <div data-thumb="{{ product.image.main }}" data-thumb-alt="g"
+                            class="taojaa-product-gallery__image">
+                            <a href="{{ product.image.main }}">
+                                <img width="800" height="1040" src="{{product.image.main}}" class="wp-post-image"
+                                    alt="g" title="grouped-img-5" data-src="{{product.image.main}}"
+                                    data-large_image_width="800" data-large_image_height="1040" decoding="async"
+                                    loading="lazy" product-data="image"
+                                    srcset="{{product.image.main}} 800w, {{product.image.main}} 600w, {{product.image.main}} 768w"
+                                    sizes="(max-width: 800px) 100vw, 800px" />
+                            </a>
+                        </div>
+                        <div class="qodef-woo-thumbnails-wrapper">
+                            {{#iterate product.image.gallery as='image'}}
+                            <div data-thumb="{{image}}" class="taojaa-product-gallery__image">
+                                <a href="{{image}}">
+                                    <img width="600" height="616" src="{{image}}"
+                                        class="attachment-taojaa_single size-taojaa_single" alt="t"
+                                        title="grouped-shop-img-9" data-src="{{image}}" data-large_image_width="600"
+                                        data-large_image_height="616" decoding="async" loading="lazy"
+                                        srcset="{{image}} 600w, {{image}} 292w"
+                                        sizes="(max-width: 600px) 100vw, 600px" />
+                                </a>
+                            </div>
+                            {{/iterate}}
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            <div class="summary entry-summary">
+                <div class="summary-content">
+                    <h1 class="qodef-woo-product-title product_title entry-title">{{product.name}}
+                    </h1>
+                    <p class="price">
+                        <span class="taojaa-Price-amount amount">
+                            <bdi>
+                                <span class="taojaa-Price-currencySymbol">{{{money product.price}}}</span>
+                            </bdi>
+                        </span>
+                    </p>
+                    <div class="taojaa-product-details__short-description">
+                        {{{product.inventory.description}}}
+                    </div>
+
+                    <product-form>
+                        {{{form 'product' product 'class="variations_form cart"'}}}
+                        <table class="variations" cellspacing="0" role="presentation">
+                            <tbody>
+                                {{#ifCond product.has_variations '===' true}}
+                                {{#iterate product.variations}}
+                                <tr>
+                                    <th class="label"><label for="{{current.type.name}}">{{current.type.name}}</label>
+                                    </th>
+                                    <td class="value">
+                                        <select id="{{current.type.name}}" variant="{{current.type.name}}"
+                                            name="{{current.type.name}}" data-show_option_none="yes">
+                                            <option>Choose an option</option>
+                                            {{#iterate current.values}}
+                                            <option value="{{current.name}}">
+                                                {{current.name}}
+                                            </option>
+                                            {{/iterate}}
+                                        </select>
+                                    </td>
+                                </tr>
+                                {{/iterate}}
+                                {{/ifCond}}
+                            </tbody>
+                        </table>
+                        <div class="error d-none">
+                            <p class="error-message"></p>
+                        </div>
+                        <div class="single_variation_wrap">
+                            <div class="taojaa-variation single_variation"></div>
+                            <div class="taojaa-variation-add-to-cart variations_button">
+                                <quantity-field>
+                                    <div class="qodef-quantity-buttons quantity">
+                                        <label class="screen-reader-text" for="quantity_6613cfb50d401">
+                                            {{product.name}} quantity
+                                        </label>
+                                        <span class="qodef-quantity-minus minus"></span>
+                                        <input type="text" id="product__quantity_{{product.id}}" product-data="quantity"
+                                            class="input-text qty text qodef-quantity-input" data-step="1" data-min="1"
+                                            data-max="{{product.default_or_selected_variant.quantity}}" name="quantity"
+                                            value="1" title="Qty" inputmode="numeric" />
+                                        <span class="qodef-quantity-plus plus"></span>
+                                    </div>
+                                </quantity-field>
+
+                                {{#ifCond product.default_or_selected_variant.in_stock '!=' true}}
+                                <button type="submit" class="single_add_to_cart_button button alt disabled"
+                                    disabled="true">
+                                    {{else}}
+                                    <button type="submit" class="single_add_to_cart_button button alt">
+                                        {{/ifCond}}
+
+                                        <span class="button_text">
+                                            {{#ifCond product.default_or_selected_variant.in_stock '!=' true}}
+                                            Out of Stock
+                                            {{else}}
+                                            Add to cart
+                                            {{/ifCond}}
+                                        </span>
+                                        {{{component "loader"}}}
+                                    </button>
+                                    <input type="hidden" name="variant_id" class="variant_id" product-data="variant_id"
+                                        value="{{product.default_or_selected_variant_id}}" />
+                            </div>
+                        </div>
+                        {{{endform}}}
+                    </product-form>
+
+                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2510  wishlist-fragment on-first-load">
+                        <div class="yith-wcwl-add-button">
+                            <a href="#" class="add_to_wishlist single_add_to_wishlist" data-product-id="2510"
+                                data-product-type="variable" data-original-product-id="2510"
+                                data-title="Add to wishlist" rel="nofollow">
+                                <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{{/if}}
+
+
+<script type="text/javascript" src="{{asset_url}}/js/quantity-field.js"></script>
+<script type="text/javascript" src="{{asset_url}}/js/product-form.js"></script>
+<script type="text/javascript" src="{{asset_url}}/js/variant-field.js"></script>

@@ -1,0 +1,36 @@
+<style type="text/css">
+    .spin-wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
+</style>
+<quick-view-modal>
+    <div id="yith-quick-view-modal" class="quick-view">
+        <div class="yith-quick-view-overlay"></div>
+        <div class="yith-wcqv-wrapper">
+            <div class="yith-wcqv-main">
+                <div class="yith-wcqv-head">
+                    <a href="#" id="yith-quick-view-close" class="yith-wcqv-close quickModalClose">X</a>
+                </div>
+                <div id="yith-quick-view-content" class="taojaa single-product">
+                    <div class="loading__spinner hidden spin-wrapper" id="spinloader">
+                    <div class="loader-02"></div>
+                    </div>
+                    <div class="quick-view-wrapper">
+                        {{{component "quick-view"}}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</quick-view-modal>
+
+<script type="text/javascript" src="{{asset_url}}/js/quick-view.js"></script>

@@ -1,0 +1,32 @@
+<cart-summary>
+    <div id="cart-summary" class="qodef-widget-dropdown-cart-content">
+        <div class="cart-summary-inner {{#ifCond cart.items.length '==' 0}} d-none {{/ifCond}}">
+            <ul class="qodef-woo-mini-cart cart-summary-list">
+                {{#iterate cart.items}}
+                {{{component "cart-item" item=current}}}
+                {{/iterate}}
+            </ul>
+            <p class="qodef-m-order-details">
+                <strong class="qodef-m-order-label">Total:</strong>
+                <span class="taojaa-Price-amount amount">
+                    <bdi>
+                        <span class="taojaa-Price-currencySymbol">{{{currency.symbol}}}</span>{{cart.subtotal_price}}
+                    </bdi>
+                </span>
+            </p>
+            <div class="qodef-m-action">
+                <a itemprop="url" href="/checkout" class="qodef-m-action-link">
+                    <span class="qodef-m-text">Checkout</span>
+                </a>
+                <a itemprop="url" href="/cart" class="qodef-m-action-link">
+                    <span class="qodef-m-text">View Cart</span>
+                </a>
+            </div>
+        </div>
+        <p class="qodef-m-posts-not-found cart-empty {{#ifCond cart.items.length '>' 0}} d-none {{/ifCond}}">
+            No products in the cart.
+        </p>
+    </div>
+</cart-summary>
+
+<script type="text/javascript" src="{{asset_url}}/js/cart-summary.js"></script>

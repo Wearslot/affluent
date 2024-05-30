@@ -36,7 +36,6 @@
     "order": [
         "hero",
         "featured-products",
-        "featured-collections",
-        "lastest-blog-posts"
+        "featured-collections"
     ]
 }
