@@ -68,7 +68,7 @@ if (!customElements.get('quick-view-modal')) {
             config.body = JSON.stringify(data);
 
             try {
-                const response = await fetch(`${routes.quick_view}`, config);
+                const response = await fetch('/product.json', config);
                 const responseData = await response.json();
 
                 if (responseData && responseData.components && responseData.components[component.id]) {
