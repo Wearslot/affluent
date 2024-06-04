@@ -6,7 +6,7 @@
                 <a itemprop="url" class="qodef-breadcrumbs-link" href="/">
                     <span itemprop="title">Home</span>
                 </a>
-                {{#ifCond page '==' 'product-detail'}}
+                {{#ifCond current_page '==' 'product-detail'}}
                 {{#ifCond product.collection '!=' null}}
                 <span class="qodef-breadcrumbs-separator"></span>
                 <a itemprop="url" class="qodef-breadcrumbs-link" href="/collections/{{product.collection.slug}}">
@@ -18,9 +18,9 @@
                 {{else}}
                 <span class="qodef-breadcrumbs-separator"></span>
                 <span itemprop="title" class="qodef-breadcrumbs-current">
-                    {{#ifCond page '==' 'shop'}} Shop All {{/ifCond}}
+                    {{#ifCond current_page '==' 'shop'}} Shop All {{/ifCond}}
                     {{#ifCond collection '!==' undefined}} {{collection.name}} {{/ifCond}}
-                    {{#ifCond page '==' 'cart'}} Cart {{/ifCond}}
+                    {{#ifCond current_page '==' 'cart'}} Cart {{/ifCond}}
                 </span>
                 {{/ifCond}}
             </div>

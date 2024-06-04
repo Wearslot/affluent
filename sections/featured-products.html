@@ -31,9 +31,10 @@
                 <div class="elementor-element elementor-element-4e03fd4 elementor-widget elementor-widget-esmee_core_product_list"
                     data-id="4e03fd4" data-element_type="widget" data-widget_type="esmee_core_product_list.default">
                     <div class="elementor-widget-container">
-                        <div class="qodef-shortcode qodef-m  qodef-woo-shortcode qodef-woo-product-list qodef-item-layout--info-below qodef-appear-animation--no qodef-grid qodef-layout--columns  qodef-gutter--normal qodef-col-num--3   qodef-item-layout--info-below qodef--no-bottom-space qodef-pagination--off qodef-responsive--custom qodef-col-num--1440--3 qodef-col-num--1366--3 qodef-col-num--1024--3 qodef-col-num--768--1 qodef-col-num--680--1 qodef-col-num--480--1">
+                        <div
+                            class="qodef-shortcode qodef-m  qodef-woo-shortcode qodef-woo-product-list qodef-item-layout--info-below qodef-appear-animation--no qodef-grid qodef-layout--columns  qodef-gutter--normal qodef-col-num--3   qodef-item-layout--info-below qodef--no-bottom-space qodef-pagination--off qodef-responsive--custom qodef-col-num--1440--3 qodef-col-num--1366--3 qodef-col-num--1024--3 qodef-col-num--768--1 qodef-col-num--680--1 qodef-col-num--480--1">
                             <ul class="qodef-grid-inner clear">
-                                {{#iterate featured_products limit=3}}
+                                {{#iterate featured_products}}
                                 <li
                                     class="qodef-e qodef-grid-item qodef-item--full product type-product post-2409 status-publish first instock product_cat-summer product_tag-variable has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
                                     <div class="qodef-e-inner">
@@ -46,7 +47,8 @@
                                                 sizes="(max-width: 800px) 100vw, 800px" />
                                             <div class="qodef-woo-product-image-inner">
                                                 <div class="qodef-additional-content">
-                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2409  wishlist-fragment on-first-load">
+                                                    <div
+                                                        class="yith-wcwl-add-to-wishlist add-to-wishlist-2409  wishlist-fragment on-first-load">
 
                                                         <div class="yith-wcwl-add-button">
                                                             <a href="{{ current.id }}"
@@ -59,7 +61,8 @@
                                                         </div>
 
                                                     </div>
-                                                    <a href="#" class="button yith-wcqv-button quick-view-btn" data-slug="{{current.slug}}">Quick View</a>
+                                                    <a href="#" class="button yith-wcqv-button quick-view-btn"
+                                                        data-slug="{{current.slug}}">Quick View</a>
                                                 </div>
                                             </div>
                                             <a href="/product/{{current.slug}}"
@@ -79,7 +82,8 @@
                                             </div>
                                             <div class="qodef-woo-product-price price">
                                                 <span class="taojaa-Price-amount amount">
-                                                    <span class="taojaa-Price-currencySymbol">{{{product_price current}}}</span>
+                                                    <span class="taojaa-Price-currencySymbol">{{{product_price
+                                                        current}}}</span>
                                                 </span>
                                             </div>
                                         </div>
