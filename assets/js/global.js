@@ -3,9 +3,7 @@ const routes = {
     cart_add: "/cart/add",
     cart_update: "/cart/update",
     discount_apply: "/discount/apply",
-    discount_remove: "/discount/remove",
-    quick_view:      "/product.json",
-    newsletter_signup: "/newsletter-signup"
+    discount_remove: "/discount/remove"
 }
 
 function fetchConfig(type = 'json') {
