@@ -27,9 +27,6 @@
     <link href="{{asset_url}}/dist/js/dist/vendor/regenerator-runtime.min6c85.js?ver=0.14.0" as="script"
         rel="prefetch" />
     <link
-        href="{{asset_url}}/vendor/plugins/taojaa/packages/taojaa-blocks/build/blocks-checkout2588.js?ver=284fe2a81c2018b9c52e44d63387db63"
-        as="script" rel="prefetch" />
-    <link
         href="{{asset_url}}/vendor/plugins/taojaa/packages/taojaa-blocks/build/wc-blocks-registrya902.js?ver=8e8154703a010d635c0c1a1766b9ca35"
         as="script" rel="prefetch" />
     <link href="{{asset_url}}/dist/js/dist/deprecated.min0a8b.js?ver=e1f84915c5e8ae38964c" as="script" rel="prefetch" />
@@ -83,9 +80,6 @@
     <link href="{{asset_url}}/dist/js/dist/autop.min33af.js?ver=9fb50649848277dd318d" as="script" rel="prefetch" />
     <link href="{{asset_url}}/dist/js/dist/plugins.min07ba.js?ver=2d369cbfdcb887111e06" as="script" rel="prefetch" />
     <link href="{{asset_url}}/dist/js/dist/wordcount.min9ebf.js?ver=55d8c2bf3dc99e7ea5ec" as="script" rel="prefetch" />
-    <link
-        href="{{asset_url}}/vendor/plugins/taojaa/packages/taojaa-blocks/build/checkout-frontendfdc9.js?ver=79dc332c10cbe7cce19ffc25e8e1d857"
-        as="script" rel="prefetch" />
     <link rel="stylesheet" id="dripicons-css"
         href="{{asset_url}}/vendor/plugins/esmee-core/inc/icons/dripicons/assets/css/dripicons.min8f99.css?ver=6.5"
         type="text/css" media="all" />
@@ -590,9 +584,6 @@
     <link rel="stylesheet" id="contact-form-7-css"
         href="{{asset_url}}/vendor/plugins/contact-form-7/includes/css/styles77e1.css?ver=5.6.4" type="text/css"
         media="all" />
-    <link rel="stylesheet" id="ctf_styles-css"
-        href="{{asset_url}}/vendor/plugins/custom-twitter-feeds/css/ctf-styles.minb95e.css?ver=2.0.3" type="text/css"
-        media="all" />
     <style id="taojaa-inline-inline-css" type="text/css">
         .taojaa form .form-row .required {
             visibility: visible;
@@ -841,27 +832,27 @@
 
 <body
     class="
-    {{#ifCond page '==' 'product-detail'}} 
-    product-template-default single single-product postid-510 theme-esmee qode-framework-1.1.6        
+    {{#ifCond current_page '==' 'product-detail'}} 
+    product-template-default single single-product postid-510       
     {{else}}
-    page-template page-template-page-full-width page-template-page-full-width-php page page-id-2166 page-child parent-pageid-9
     {{/ifCond}}
+    page-template page-template-page-full-width page-template-page-full-width-php page page-id-2166 page-child parent-pageid-9
     taojaa taojaa-page theme-esmee qode-framework-1.1.6 taojaa-no-js qodef-qi--no-touch qi-addons-for-elementor-1.5.4 qodef-back-to-top--enabled  qodef-header--divided qodef-header-appearance--none qodef-mobile-header--standard qodef-drop-down-second--full-width qodef-drop-down-second--default esmee-core-1.1 esmée-1.0 qodef-content-grid-1300 qodef-search--covers-header elementor-default elementor-kit-13 elementor-page elementor-page-2166"
     itemscope itemtype="https://schema.org/WebPage">
     <div id="qodef-page-wrapper" class>
 
         {{{sections "header-group"}}}
 
-        {{#ifCond page '!=' '404'}}
+        {{#ifCond current_page '!=' '404'}}
         <div id="qodef-page-outer">
             {{!-- Breadcombs --}}
             {{{render "breadcrumbs"}}}
 
             <div id="qodef-page-inner"
-                class="{{#ifCond page '==' 'product-detail'}} qodef-content-grid {{else}} qodef-content-full-width {{/ifCond}}">
+                class="{{#ifCond current_page '==' 'product-detail'}} qodef-content-grid {{else}} qodef-content-full-width {{/ifCond}}">
                 <main id="qodef-page-content" class="qodef-grid qodef-layout--template " role="main">
                     <div class="qodef-grid-inner clear">
-                        {{#ifCond page '===' 'product-detail'}}
+                        {{#ifCond current_page '===' 'product-detail'}}
                         <div id="qodef-woo-page"
                             class="qodef-grid-item qodef--single qodef-popup--magnific-popup qodef-magnific-popup qodef-popup-gallery qodef-woo-single-info-below-featured-image">
                             <div class="taojaa-notices-wrapper"></div>
@@ -883,7 +874,7 @@
             {{{content}}}
         {{/ifCond}}
 
-        {{{render "footer"}}}
+        {{{sections "footer-group"}}}
 
         {{{render "newsletter-popup"}}}
 
@@ -1096,7 +1087,6 @@
                     responsiveLevels: "1920,1700,1125,700",
                     fullScreenOffsetContainer: "html.no-touchevents #qodef-page-header, html.touchevents #qodef-page-mobile-header",
                     fullScreenOffset: "-40px",
-                    //ajaxUrl: "https://esmee.qodeinteractive.com/wp-admin/admin-ajax.php",
                     progressBar: { disableProgressBar: true },
                     navigation: {
                         wheelCallDelay: 1000,

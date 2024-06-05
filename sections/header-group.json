@@ -8,7 +8,9 @@
         },
         "header": {
             "type": "header",
-            "available_types": [],
+            "available_types": [
+                "header"
+            ],
             "settings": {}
         }
     },
