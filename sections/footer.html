@@ -93,6 +93,19 @@
                             </div>
                         </div>
                     </div>
+                    <currency-switch class="qodef-grid-item" >
+                        <div id="text-6" class="widget widget_text" data-area="qodef-footer-top-area-column-4">
+                            <h4 class="qodef-widget-title">Switch Currency</h4>
+                        </div>
+                        <select id="currency-selector" variant="currency"
+                            name="currency" data-show_option_none="yes">
+                            {{#each store.currencies}}
+                            <option value="{{this.code}}" {{#if this.is_default}} selected="true" {{/if}} {{#if @index}} {{else}} hidden="true" {{/if}}>
+                                {{this.code}} {{{this.symbol}}}
+                            </option>
+                            {{/each}}
+                        </select>
+                    </currency-switch>
                 </div>
             </div>
         </div>
@@ -126,3 +139,5 @@
             </g>
         </svg> </span>
 </a>
+
+<script type="text/javascript" src="{{asset_url}}/js/currency-switch.js"></script>
