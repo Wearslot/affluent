@@ -4,7 +4,7 @@
             <p role="status" aria-live="polite" aria-atomic="true"></p>
             <ul></ul>
         </div>
-        {{form 'contact-form' 'class="wpcf7-form init demo"'}}
+        {{{form 'contact-form' 'class="wpcf7-form init demo"'}}}
         <div class="qodef-vertical-form">
             <span class="wpcf7-form-control-wrap" data-name="name">
                 <input type="text" name="name" size="40"
@@ -37,8 +37,11 @@
                 <span class="qodef-m-text button_text">Send now</span>
             </button>
         </div>
-        <div class="wpcf7-response-output" aria-hidden="true">
+        <div class="wpcf7-response-output {{#ifCond error '!==' undefined}} d-block {{/ifCond}}" aria-hidden="true">
+            <div class="error">
+                <p class="error-message">{{error}}</p>
+            </div>
         </div>
-        {{endform}}
+        {{{endform}}}
     </div>
 </div>
