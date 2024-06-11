@@ -3,7 +3,7 @@
         "newsletter_popup": {
             "image": {
                 "type": "image",
-                "value": ""
+                "value": "https://res.cloudinary.com/daisikwbm/image/upload/v1717351113/pexels-tubarones-2764975_d7bn3w.jpg"
             },
             "title": {
                 "type": "text",
