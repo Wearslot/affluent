@@ -99,11 +99,11 @@
                         </div>
                         <select id="currency-selector" variant="currency"
                             name="currency" data-show_option_none="yes">
-                            {{#each store.currencies}}
-                            <option value="{{this.code}}" {{#if this.is_default}} selected="true" {{/if}} {{#if @index}} {{else}} hidden="true" {{/if}}>
-                                {{this.code}} {{{this.symbol}}}
+                            {{#iterate store.currencies}}
+                            <option value="{{current.code}}" {{#ifCond current.index '==' 0}} hidden="true" {{/ifCond}} {{#ifCond current.code '==' currency.code}} selected="true" {{/ifCond}}>
+                                {{current.code}} {{{current.symbol}}}
                             </option>
-                            {{/each}}
+                            {{/iterate}}
                         </select>
                     </currency-switch>
                 </div>

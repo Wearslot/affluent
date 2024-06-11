@@ -59,7 +59,7 @@
                     </div>
 
                     <product-form>
-                        {{{form 'product' product 'class="variations_form cart"'}}}
+                        {{{form 'product' 'class="variations_form cart"' product=product}}}
                         <table class="variations" cellspacing="0" role="presentation">
                             <tbody>
                                 {{#ifCond product.has_variations '===' true}}
