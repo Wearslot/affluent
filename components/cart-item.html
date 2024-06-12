@@ -1,6 +1,6 @@
 <li class="qodef-woo-mini-cart-item qodef-e" cart-item="{{item.id}}">
     {{{form "remove-item" item=item}}}
-    <button type="submit" style="padding: 0px !important;" class="qodef-e-remove remove remove_from_cart_button"
+    <button type="submit" class="qodef-e-remove remove remove_from_cart_button"
         aria-label="Remove this item">
         <span class="qodef-icon-elegant-icons icon_close button_text"></span>
         {{{component 'loader'}}}
@@ -19,7 +19,7 @@
         <span class="quantity">{{item.quantity}} ×
             <span class="taojaa-Price-amount amount">
                 <bdi>
-                    <span class="taojaa-Price-currencySymbol">{{{currency.symbol}}}</span>{{item.sale_price}}
+                    <span class="taojaa-Price-currencySymbol">{{{money item.sale_price}}}</span>
                 </bdi>
             </span>
         </span>

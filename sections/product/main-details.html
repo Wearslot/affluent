@@ -46,8 +46,7 @@
                 <h1 class="qodef-woo-product-title product_title entry-title">{{product.name}}</h1>
                 <p class="price">
                     <span class="taojaa-Price-amount amount">
-                        <bdi><span class="taojaa-Price-currencySymbol" product-data="price">{{{product_price
-                                product}}}</span></bdi>
+                        <bdi><span class="taojaa-Price-currencySymbol" product-data="price">{{{product_price product}}}</span></bdi>
                     </span>
                 </p>
                 <div class="product_meta">
@@ -79,7 +78,7 @@
                     {{/ifCond}}
                 </div>
                 <product-form>
-                    {{{form 'product' product=product 'class="variations_form cart"'}}}
+                    {{{form 'product' 'class="variations_form cart"' product=product}}}
                     <table class="variations" cellspacing="0" role="presentation">
                         <tbody>
                             {{#variations product}}

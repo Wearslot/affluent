@@ -705,9 +705,51 @@
             padding-right: 30px;
         }
     </style>
+    {{{styles}}}
+        :root {
+            --qode-main-color: {{store.settings.primary_color}} !important;
+            --qode-header-light-color: {{store.settings.header_light_background}} !important;
+            --qode-header-light-hover-color: {{store.settings.header_light_hover_background}} !important;
+            --qode-header-dark-color: {{store.settings.header_dark_background}} !important;
+            --qode-header-dark-hover-color: {{store.settings.header_dark_hover_background}} !important;
+        }
+    {{{endstyles}}}
     <link rel="stylesheet" id="esmee-core-elementor-css"
         href="{{asset_url}}/vendor/plugins/esmee-core/inc/plugins/elementor/assets/css/elementor.min8f99.css?ver=6.5"
         type="text/css" media="all" />
+
+    {{{styles}}}
+        #qodef-woo-page .added_to_cart, #qodef-woo-page .button, #yith-quick-view-modal .added_to_cart, #yith-quick-view-modal .button, .qodef-woo-shortcode .added_to_cart, .qodef-woo-shortcode .button {
+            background: {{store.settings.button_bg_color}} !important;
+            color: {{store.settings.button_text_color}} !important;
+        }
+        #qodef-page-footer-top-area {
+            background: {{store.settings.footer_bg_color}} !important;
+        }
+        #qodef-page-footer-bottom-area {
+            background: {{store.settings.primary_color}} !important;
+        }
+        .widget.widget_esmee_core_side_area_opener .qodef-opener-icon {
+            background: {{store.settings.primary_color}} !important;
+        }
+        #qodef-side-area {
+            background: {{store.settings.footer_bg_color}} !important;
+        }
+        .qodef-button.qodef-layout--filled.qodef-html--link {
+            background: {{store.settings.button_bg_color}} !important;
+            color: {{store.settings.button_text_color}} !important;
+        }
+        .widget_esmee_core_woo_dropdown_cart .qodef-widget-dropdown-cart-content, .widget_esmee_core_woo_dropdown_cart .widget_shopping_cart_content, .widget_shopping_cart .qodef-widget-dropdown-cart-content, .widget_shopping_cart .widget_shopping_cart_content {
+            background: {{store.settings.primary_color}} !important;
+        }
+        .qodef-e-remove {
+            padding: 8px !important;
+            line-height: inherit !important;
+            background: {{store.settings.button_bg_color}} !important;
+            color: {{store.settings.button_text_color}} !important;
+            letter-spacing: 0 !important;
+        }
+    {{{endstyles}}}
     <link rel="stylesheet" id="elementor-icons-css"
         href="{{asset_url}}/vendor/plugins/elementor/assets/lib/eicons/css/elementor-icons.min91ce.css?ver=5.16.0"
         type="text/css" media="all" />
