@@ -23,15 +23,15 @@ if (!customElements.get('newletter-modal')) {
 
         onSubmit(event) {
             event.preventDefault();
+            this.signUp.querySelector('.loading__spinner').classList.remove('hidden');
             this.signUp.disabled = true
             if ( this.email.value !== "") {
-                this.feedback.innerText= "Loading....";
                 const config = fetchConfig();
                 config.body = JSON.stringify({email: this.email.value})
-                console.log(config.body)
                 fetch(`${routes.newsletter_signup}`, config)
                 .then(response => response.json())
                 .then(data => {
+                    this.signUp.querySelector('.loading__spinner').classList.add('hidden');
                     this.feedback.innerText= data.message;
                 })
                 .catch(e => {
@@ -39,6 +39,7 @@ if (!customElements.get('newletter-modal')) {
                 });
             }
             else {
+                this.signUp.querySelector('.loading__spinner').classList.add('hidden');
                 this.feedback.innerText= "Please enter your email";
                 this.email.value = ""
                 this.signUp.disabled = false

@@ -26,10 +26,8 @@
                                 aria-required="true" aria-invalid="false" placeholder="Your e-mail" /></span>
                         <button type="submit"
                             class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m" id="signupButton">
-                            <div class="loading__spinner hidden" style="width: 10px; height: 10px;" id="spinloader">
-                                <div class="loader-02" style="color: aqua;"></div>
-                            </div>
                             <span class="qodef-m-text">Send</span>
+                            {{{component "loader"}}}
                         </button>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                         {{{endform}}}
