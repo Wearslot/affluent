@@ -35,7 +35,7 @@ if (!customElements.get('cart-items')) {
                 .then(response => response.json())
                 .then(response => {
 
-                    if (response.status) {
+                    if (response.status === 'error') {
                         return this.handleErrors(response.message);
                     }
 
