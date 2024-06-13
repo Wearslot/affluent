@@ -21,17 +21,18 @@
                         </div>
                         {{{form 'newsletter' 'class="wpcf7-form init demo" data-status="init"'}}}
                         <span class="wpcf7-form-control-wrap" data-name="your-email">
-                            <input type="email" name="email" value size="40"
+                            <input type="email" name="email" value size="40" id="email"
                                 class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                aria-required="true" aria-invalid="false" placeholder="Your e-mail" /></span>
+                            aria-required="true" aria-invalid="false" placeholder="Your e-mail" /></span>
                         <button type="submit"
-                            class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m">
+                            class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m" id="signupButton">
                             <span class="qodef-m-text">Send</span>
+                            {{{component "loader"}}}
                         </button>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                         {{{endform}}}
                     </div>
-                    <div class="qodef-sp-prevent">
+                    <div class="qodef-sp-prevent" style="margin-top: 20px;">
                         <div class="qodef-sp-prevent-inner">
                             <span class="qodef-sp-prevent-input" data-value="no">
                                 <svg x="0px" y="0px" width="10.656px" height="10.692px" viewBox="0 0 10.656 10.692"
@@ -44,13 +45,13 @@
                             </span>
                             <label class="qodef-sp-prevent-label">Disable This Pop-up</label>
                         </div>
+                        <p class="qodef-m-text" id="email_feedback" style="color: red; margin-top: 15px;"></p>
                     </div>
                 </div>
-                <div class="qodef-sp-image" style="background-image: url({{settings.newsletter_pop_up_image}})">
+                <div class="qodef-sp-image" style="background-image: url({{settings.newsletter_popup.image.value}})">
                 </div>
             </div>
         </div>
     </div>
 </newletter-modal>
 
-<script type="text/javascript" src="{{asset_url}}/js/newsletter-modal.js"></script>

@@ -34,7 +34,7 @@ if (!customElements.get('cart-summary')) {
             fetch(url, config)
                 .then(response => response.json())
                 .then(response => {
-                    if (response.status) {
+                    if (response.status === 'error') {
                         return this.handleError(response.message);
                     }
 

@@ -73,19 +73,21 @@
                                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                                         <ul></ul>
                                     </div>
-                                    {{{form "newsletter"}}}
+                                    {{{form "newsletter" }}}
                                     <div class="qodef-horizontal-form">
                                         <span class="wpcf7-form-control-wrap" data-name="your-email">
                                             <input type="email" name="your-email" value size="40"
-                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" id="email"
                                                 aria-required="true" aria-invalid="false" placeholder="Your e-mail" />
                                         </span>
                                         <div class="qodef-inline-right qodef-ft-after">
                                             <button type="submit"
-                                                class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m">
+                                                class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m" id="signupButton">
                                                 <span class="qodef-m-text">&nbsp;</span>
+                                                {{{component "loader"}}}
                                             </button>
                                         </div>
+                                        <p class="qodef-m-text" id="email_feedback" style="color: red; margin-top: 15px;"></p>
                                     </div>
                                     <div class="wpcf7-response-output d-none" aria-hidden="true"></div>
                                     {{{endform}}}
