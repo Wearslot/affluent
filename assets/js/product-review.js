@@ -55,16 +55,14 @@ if (!customElements.get('review-form')) {
                     message: this.comment.value,
                     email: this.email.value
                 })
-                console.log(config.body)
 
                 fetch(`${routes.product_review}`, config)
                 .then(response => response.json())
                 .then(data => {
-                    this.feedback.innerText = data
-                    console.log(data);
+                    this.feedback.innerText = data.message
                 })
-                .catch(e => {
-                    console.log(e);
+                .catch(err => {
+                    this.feedback.innerText = err.message
                 });
 
             }
