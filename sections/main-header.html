@@ -7,7 +7,7 @@ visibility: visible !important;
 <header id="qodef-page-header" role="banner">
     <div id="qodef-page-header-inner"
         class="{{#ifCond page '!=' 'index'}} qodef-skin--dark {{else}} qodef-skin--light {{/ifCond}}">
-        {{#ifCond store.navigations.header_menu '!==' undefined}}
+        {{#if store.navigations.header_menu}}
         <div class="qodef-divided-header-left-wrapper">
             <nav class="qodef-header-navigation" role="navigation" aria-label="Divided Left Menu">
                 <ul id="menu-main-menu-1" class="menu">
@@ -85,7 +85,7 @@ visibility: visible !important;
                 </ul>
             </nav>
         </div>
-        {{/ifCond}}
+        {{/if}}
 
         <a itemprop="url" class="qodef-header-logo-link qodef-height--set qodef-source--image" href="/" rel="home">
             <img width="330" height="96" src="{{store.logo}}" class="qodef-header-logo-image qodef--main"
