@@ -44,6 +44,7 @@
                         class="qodef-m-line qodef--2"></span><span class="qodef-m-line qodef--3"></span></span> </span>
         </a>
     </div>
+    {{#ifCond store.navigations.header_menu '!==' undefined}}
     <nav class="qodef-mobile-header-navigation" role="navigation" aria-label="Mobile Menu">
         <ul id="menu-main-menu-4" class>
             {{#iterate store.navigations.header_menu}}
@@ -109,4 +110,5 @@
             {{/iterate}}
         </ul>
     </nav>
+    {{/ifCond}}
 </header>
