@@ -1,8 +1,7 @@
 <div id="review_form_wrapper">
     <div id="review_form">
         <div id="respond" class="comment-respond">
-            <h3 id="reply-title" class="comment-reply-title">Be the first to review &ldquo;Red
-                swimwear&rdquo;
+            <h3 id="reply-title" class="comment-reply-title">Be the first to review &ldquo;{{ product.name }}&rdquo;
                 <small>
                     <a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond"
                         style="display:none;">Cancel reply</a>
@@ -18,7 +17,7 @@
                 <div class="comment-form-rating">
                     <label for="rating">Your Rating <span class="required">*</span></label>
                     <p class="stars qodef-comment-form-ratings">
-                        <a class="star-1" href="#">1
+                        <a class="star" href="#">1
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="32" height="32" viewBox="0 0 32 32">
                                 <g>
@@ -28,7 +27,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a class="star-2" href="#">2<svg xmlns="http://www.w3.org/2000/svg"
+                        <a class="star" href="#">2<svg xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
                                 <g>
                                     <path
@@ -37,21 +36,21 @@
                                 </g>
                             </svg>
                         </a>
-                        <a class="star-3" href="#">3<svg xmlns="http://www.w3.org/2000/svg"
+                        <a class="star" href="#">3<svg xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
                                 <g>
                                     <path
                                         d="M 20.756,11.768L 15.856,1.84L 10.956,11.768L0,13.36L 7.928,21.088L 6.056,32L 15.856,26.848L 25.656,32L 23.784,21.088L 31.712,13.36 z">
                                     </path>
                                 </g>
-                            </svg></a><a class="star-4" href="#">4<svg xmlns="http://www.w3.org/2000/svg"
+                            </svg></a><a class="star" href="#">4<svg xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
                                 <g>
                                     <path
                                         d="M 20.756,11.768L 15.856,1.84L 10.956,11.768L0,13.36L 7.928,21.088L 6.056,32L 15.856,26.848L 25.656,32L 23.784,21.088L 31.712,13.36 z">
                                     </path>
                                 </g>
-                            </svg></a><a class="star-5" href="#">5<svg xmlns="http://www.w3.org/2000/svg"
+                            </svg></a><a class="star" href="#">5<svg xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
                                 <g>
                                     <path
@@ -60,14 +59,6 @@
                                 </g>
                             </svg></a>
                     </p>
-                    <select name="rating" id="rating" required>
-                        <option value>Rate&hellip;</option>
-                        <option value="5">Perfect</option>
-                        <option value="4">Good</option>
-                        <option value="3">Average</option>
-                        <option value="2">Not that bad</option>
-                        <option value="1">Very poor</option>
-                    </select>
                 </div>
                 <p class="comment-form-comment">
                     <textarea id="comment" name="comment" placeholder="Your Review *" cols="45" rows="8"
@@ -90,20 +81,22 @@
                     </div>
                 </div>
                 <p class="comment-form-cookies-consent">
-                    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox"
-                        value="yes" />
+                    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox"/>
                     <label for="wp-comment-cookies-consent">Save my name, email, and website in this
                         browser for the next time I comment.
                     </label>
                 </p>
-                <p class="form-submit"><button name="submit" type="submit" id="submit"
+                <p class="form-submit"><button name="submit" type="submit" id="submit" data-id="{{product.id}}"
                         class="qodef-button qodef-layout--filled" value="Submit"><span
                             class="qodef-m-text">Submit</span></button> <input type="hidden" name="comment_post_ID"
                         value="510" id="comment_post_ID" />
                     <input type="hidden" name="comment_parent" id="comment_parent" value="0" />
                 </p>
+                <p class="qodef-widget-title" id="feedback"></p>
                 {{{endform}}}
             </review-form>
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="{{asset_url}}/js/product-review.js"></script>
