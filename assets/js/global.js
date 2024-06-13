@@ -4,6 +4,7 @@ const routes = {
     cart_update: "/cart/update",
     discount_apply: "/discount/apply",
     discount_remove: "/discount/remove",
+    product_review: "/reviews",
     newsletter_signup: "/newsletter-signup"
 }
 
