@@ -17,15 +17,19 @@
                             <div class="qodef-additional-content">
                                 <div
                                     class="yith-wcwl-add-to-wishlist add-to-wishlist-851  wishlist-fragment on-first-load">
-                                    <div class="yith-wcwl-add-button">
+                                    <!-- <div class="yith-wcwl-add-button">
                                         <a href="index6516.html?add_to_wishlist=851&amp;_wpnonce=a124fad9de"
                                             class="add_to_wishlist single_add_to_wishlist" data-product-type="simple" 
                                             data-title="Add to wishlist" rel="nofollow">
                                             <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
                                         </a>
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <a href="#" class="button yith-wcqv-button">Quick View</a>
+                                <a href="#" class="button yith-wcqv-button quick-view-btn" data-slug="{{current.slug}}">
+                                    <i class="yith-wcwl-icon fa fa-eye" style="padding-bottom: 5px;">
+                                        <span>Quick View</span>
+                                    </i>
+                                </a>
                             </div>
                         </div><a href="/product/{{current.slug}}"
                             class="taojaa-LoopProduct-link taojaa-loop-product__link"></a>
@@ -55,3 +59,5 @@
     </div>
 </section>
 {{/if}}
+
+<script type="text/javascript" src="{{asset_url}}/js/quick-view.js"></script>

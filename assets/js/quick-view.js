@@ -8,6 +8,7 @@ if (!customElements.get('quick-view-modal')) {
             this.closeBtn = null;
             this.loading = null;
             this.prodSlug = null;
+            this.quickViewLoad = null;
 
             // Observer for detecting when the element is added to the DOM
             this.observer = new MutationObserver(this.init.bind(this));
@@ -19,6 +20,7 @@ if (!customElements.get('quick-view-modal')) {
             this.modal = this.querySelector('.quick-view');
             this.closeBtn = this.querySelector('.quickModalClose');
             this.loading = this.querySelector('#spinloader');
+            this.quickViewLoad = this.querySelector('.quick-view-load');
 
             // Find all open buttons and add click event listeners
             this.openButtons = document.querySelectorAll(".quick-view-btn");
@@ -40,6 +42,8 @@ if (!customElements.get('quick-view-modal')) {
 
         openModal() {
             this.modal.classList.add("open");
+            this.loading.classList.remove('hidden');
+            this.loading.classList.add('spin-wrapper');
             this.fetchProductData(this.prodSlug);
         }
 
@@ -50,10 +54,6 @@ if (!customElements.get('quick-view-modal')) {
 
 
         async fetchProductData(prodSlug) {
-
-            this.loading.classList.remove('hidden');
-            this.loading.classList.add('spin-wrapper');
-
             const component = {
                 id: 'quick-view',
                 selector: '.quick-view-wrapper'
@@ -79,6 +79,7 @@ if (!customElements.get('quick-view-modal')) {
 
                 this.loading.classList.add('hidden');
                 this.loading.classList.remove('spin-wrapper');
+                this.quickViewLoad.style.display = 'none';
             } catch (e) {
                 console.error(e);
             }
