@@ -8,7 +8,7 @@ if (!customElements.get('quick-view-modal')) {
             this.closeBtn = null;
             this.loading = null;
             this.prodSlug = null;
-            this.quickViewLoad = null;
+            this.quickLoad = null;
 
             // Observer for detecting when the element is added to the DOM
             this.observer = new MutationObserver(this.init.bind(this));
@@ -20,7 +20,7 @@ if (!customElements.get('quick-view-modal')) {
             this.modal = this.querySelector('.quick-view');
             this.closeBtn = this.querySelector('.quickModalClose');
             this.loading = this.querySelector('#spinloader');
-            this.quickViewLoad = this.querySelector('.quick-view-load');
+            this.quickLoad = this.querySelector(".quickViewLoad");
 
             // Find all open buttons and add click event listeners
             this.openButtons = document.querySelectorAll(".quick-view-btn");
@@ -28,8 +28,10 @@ if (!customElements.get('quick-view-modal')) {
             this.openButtons.forEach(button => {
                 button.addEventListener("click", (event) => {
                     event.preventDefault();
-
-                    this.prodSlug = event.target.getAttribute("data-slug");
+                    const target = event.target;
+                    console.log("Clicked button:", target);
+                    this.prodSlug = target.getAttribute("data-slug");
+                    console.log("Product slug:", this.prodSlug)
                     this.openModal();
                 });
             });
@@ -79,7 +81,7 @@ if (!customElements.get('quick-view-modal')) {
 
                 this.loading.classList.add('hidden');
                 this.loading.classList.remove('spin-wrapper');
-                this.quickViewLoad.style.display = 'none';
+                this.quickLoad.classList.add('hidden');
             } catch (e) {
                 console.error(e);
             }
