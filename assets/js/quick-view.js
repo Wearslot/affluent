@@ -29,9 +29,7 @@ if (!customElements.get('quick-view-modal')) {
                 button.addEventListener("click", (event) => {
                     event.preventDefault();
                     const target = event.target;
-                    console.log("Clicked button:", target);
                     this.prodSlug = target.getAttribute("data-slug");
-                    console.log("Product slug:", this.prodSlug)
                     this.openModal();
                 });
             });
