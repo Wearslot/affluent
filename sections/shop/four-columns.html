@@ -31,7 +31,7 @@
                                                                 data-fragment-ref="4459"
                                                                 data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:4459,&quot;parent_product_id&quot;:4459,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
 
-                                                                <div class="yith-wcwl-add-button">
+                                                                <!-- <div class="yith-wcwl-add-button">
                                                                     <a href="?add_to_wishlist=4459"
                                                                         class="add_to_wishlist single_add_to_wishlist"
                                                                         data-product-id="4459"
@@ -41,11 +41,14 @@
                                                                         <i class="yith-wcwl-icon fa fa-heart-o"></i>
                                                                         <span>Add to wishlist</span>
                                                                     </a>
-                                                                </div>
+                                                                </div> -->
                                                             </div>
 
-                                                            <a href="#" class="button yith-wcqv-button"
-                                                                data-product_id="4459">Quick View</a>
+                                                            <a href="#" class="button yith-wcqv-button quick-view-btn" data-slug="{{current.slug}}">
+                                                                <i class="yith-wcwl-icon fa fa-eye" style="padding-bottom: 5px;" data-slug="{{current.slug}}">
+                                                                    <span data-slug="{{current.slug}}">Quick View</span>
+                                                                </i>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <a href="/product/{{current.slug}}"
@@ -83,3 +86,5 @@
         </section>
     </div>
 </div>
+
+<script type="text/javascript" src="{{asset_url}}/js/quick-view.js"></script>
