@@ -65,6 +65,9 @@ if (!customElements.get('review-form')) {
                     this.feedback.innerText = err.message
                 });
 
+            }else {
+                this.feedback.innerText = "Please enter all information."
+                this.submitButton.disabled = false
             }
         }
 
