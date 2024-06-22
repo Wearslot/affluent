@@ -50,7 +50,7 @@
                                                     <div
                                                         class="yith-wcwl-add-to-wishlist add-to-wishlist-2409  wishlist-fragment on-first-load">
 
-                                                        <div class="yith-wcwl-add-button">
+                                                        <!-- <div class="yith-wcwl-add-button">
                                                             <a href="{{ current.id }}"
                                                                 class="add_to_wishlist single_add_to_wishlist"
                                                                 data-product-type="variable"
@@ -58,11 +58,14 @@
                                                                 <i class="yith-wcwl-icon fa fa-heart-o"></i>
                                                                 <span>Add to wishlist</span>
                                                             </a>
-                                                        </div>
+                                                        </div> -->
 
                                                     </div>
                                                     <a href="#" class="button yith-wcqv-button quick-view-btn"
-                                                        data-slug="{{current.slug}}">Quick View</a>
+                                                        data-slug="{{current.slug}}"> 
+                                                        <i class="yith-wcwl-icon fa fa-eye" style="padding-bottom: 5px;" data-slug="{{current.slug}}">
+                                                            <span data-slug="{{current.slug}}">Quick View</span>
+                                                        </i></a>
                                                 </div>
                                             </div>
                                             <a href="/product/{{current.slug}}"
@@ -98,3 +101,4 @@
         </div>
     </div>
 </section>
+<script type="text/javascript" src="{{asset_url}}/js/quick-view.js"></script>
