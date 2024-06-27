@@ -6,8 +6,8 @@ const routes = {
     discount_remove: "/discount/remove",
     product_review: "/reviews",
     newsletter_signup: "/newsletter-signup",
-    auth_login: "auth/login",
-    auth_register: "auth/register"
+    auth_login: "/auth/login",
+    auth_register: "/auth/register"
 }
 
 function fetchConfig(type = 'json') {
