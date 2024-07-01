@@ -53,6 +53,7 @@ if (!customElements.get('register-form')) {
         this.submitButton.disabled = false
         this.feedback.classList.remove('hidden')
         this.loadingSpinner.classList.add('hidden');
+        this.registerForm.reset()
       }
 
       
