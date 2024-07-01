@@ -28,12 +28,14 @@
       <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="confirm-password" id="confirm-password" autocomplete="confirm-password" />
       </p>
       <p class="form-row">
-      <button type="submit" class="woocommerce-button button" id="submit">Sign Up</button>
+      <button type="submit" class="woocommerce-button button" id="submit">Sign Up
+        {{{component "loader"}}}
+      </button>
       </p>
       <p class="woocommerce-LostPassword lost_password">
       <a href="/account/login">Have an account? Login</a>
       </p>
-      <p class="qodef-m-text" id="feedback" style="margin-top: 15px; border: 2px solid aqua; padding: 5px;"></p>
+      <p class="qodef-m-text" id="feedback" style="margin-top: 15px; border: 2px solid aqua; padding: 5px; width: max-content;text-transform: uppercase;"></p>
       </form>
       </div>
       </div>
