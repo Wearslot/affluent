@@ -21,7 +21,7 @@ if (!customElements.get('register-form')) {
         const data = new FormData(this.registerForm)
         this.submitButton.disabled = true
     
-        if (data.values().length > 0) {
+        if (data.get('userName') && data.get('password') && data.get('userEmail') && data.get('confirm-password')) {
           const config = fetchConfig();
           config.body = JSON.stringify({
             name: data.get('userName'),
