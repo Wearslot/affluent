@@ -3,9 +3,18 @@
     "sections": {
         "hero": {
             "type": "home-hero",
-            "settings": {
-                "type": "slideshow"
-            }
+            "widgets": [
+                {
+                    "type": "heading",
+                    "tag": "h2",
+                    "settings": {}
+                },
+                {
+                    "type": "navigation",
+                    "handle": "header_menu",
+                    "settings": {}
+                }
+            ]
         },
         "featured-products": {
             "type": "featured-products",

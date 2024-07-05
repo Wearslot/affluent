@@ -1,1 +1,7 @@
-{"name":"fashion-house","version":"1.0.0","store":"alkensfootwear","id":73}
+{
+    "id": 73,
+    "name": "fashion-house",
+    "version": "1.0.0",
+    "store": "alkensfootwear.taojaa.shop",
+    "enableLogs": true
+}
