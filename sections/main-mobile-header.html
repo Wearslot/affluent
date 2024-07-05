@@ -108,6 +108,33 @@
                 <a href="{{current.url}}"><span class="qodef-menu-item-text">{{current.name}}</span></a>
             </li>
             {{/iterate}}
+
+            <li
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52 qodef-menu-item--narrow">
+                <a href="#"><span class="qodef-menu-item-text">Account</span></a><svg class="qodef-menu-item-arrow"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                    viewBox="0 0 32 32">
+                    <g>
+                        <path
+                            d="M 13.8,24.196c 0.39,0.39, 1.024,0.39, 1.414,0l 6.486-6.486c 0.196-0.196, 0.294-0.454, 0.292-0.71 c0-0.258-0.096-0.514-0.292-0.71L 15.214,9.804c-0.39-0.39-1.024-0.39-1.414,0c-0.39,0.39-0.39,1.024,0,1.414L 19.582,17 L 13.8,22.782C 13.41,23.172, 13.41,23.806, 13.8,24.196z">
+                        </path>
+                    </g>
+                </svg>
+                <div class="qodef-drop-down-second">
+                    <div class="qodef-drop-down-second-inner">
+                      <ul class="sub-menu">
+                        <li>
+                            <a href="/account/login"><span
+                                    class="qodef-menu-item-text">Login</span></a>
+                        </li>
+                        <li>
+                            <a href="/account/register"><span
+                                    class="qodef-menu-item-text">Register</span></a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </li>
         </ul>
     </nav>
     {{/ifCond}}
