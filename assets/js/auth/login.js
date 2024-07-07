@@ -24,10 +24,10 @@ if (!customElements.get('login-form')) {
 
     login(event) {
       event.preventDefault();
-      this.activateLoadingState();
-
+      
       const data = new FormData(this.loginForm)
-
+      this.activateLoadingState();
+      
       if (this.saveDetail.checked === true) {
           const loginDetail = {
             email: data.get('userEmail'),
@@ -53,6 +53,10 @@ if (!customElements.get('login-form')) {
           this.feedback.innerText = err.message
         });
 
+      }
+      else {
+        this.deactivateLoadingState()
+        this.feedback.innerText = "All information are required!"
       }
     }
 
