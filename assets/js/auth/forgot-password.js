@@ -47,10 +47,9 @@ if (!customElements.get('forgot-password')) {
 
     deactivateLoadingState() {
       this.submitButton.disabled = false
-      this.forgotPassword.classList.add('hidden')
       this.feedback.classList.remove('hidden')
       this.loadingSpinner.classList.add('hidden');
-      this.loginForm.reset()
+      this.forgotForm.reset()
     }
 
       
