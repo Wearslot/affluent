@@ -10,7 +10,7 @@ if (!customElements.get('reset-form')) {
       
       this.loadingSpinner = this.querySelector('.loading__spinner');
 
-      this.submitButton = this.querySelector('#submit');
+      this.submitButton = this.querySelector('#submitt');
       this.submitButton.addEventListener("click", this.reset.bind(this));
     }
 
@@ -45,6 +45,9 @@ if (!customElements.get('reset-form')) {
           .then(data => {
             this.deactivateLoadingState()
             this.feedback.innerText = data.message
+            setTimeout(() => {
+              location.href = `${routes.auth_login}`
+            }, 3000)
           })
           .catch(err => {
             this.deactivateLoadingState()
