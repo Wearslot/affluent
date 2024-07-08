@@ -45,9 +45,11 @@ if (!customElements.get('reset-form')) {
           .then(data => {
             this.deactivateLoadingState()
             this.feedback.innerText = data.message
-            setTimeout(() => {
-              location.href = `${routes.auth_login}`
-            }, 3000)
+            if (data.message === "Password reset successfully!") {
+              setTimeout(() => {
+                location.href = `${routes.auth_login}`
+              }, 2000)
+            }
           })
           .catch(err => {
             this.deactivateLoadingState()
