@@ -3,18 +3,18 @@
     "sections": {
         "hero": {
             "type": "home-hero",
-            "widgets": [
-                {
+            "widgets": {
+                "heading": {
                     "type": "heading",
                     "tag": "h2",
                     "settings": {}
                 },
-                {
+                "navigation": {
                     "type": "navigation",
                     "handle": "header_menu",
                     "settings": {}
                 }
-            ]
+            }
         },
         "featured-products": {
             "type": "featured-products",
