@@ -1,10 +1,10 @@
-{{{styles}}}
+{{#styles}}
 header .widget_esmee_core_woo_dropdown_cart.active .qodef-widget-dropdown-cart-content {
 opacity: 1 !important;
 visibility: visible !important;
 }
-{{{endstyles}}}
-<header id="qodef-page-header" role="banner" style="position: fixed; z-index: 100;">
+{{/styles}}
+<header id="qodef-page-header" role="banner" style="position: static; z-index: 100;">
     <div id="qodef-page-header-inner"
         class="{{#ifCond page '!=' 'index'}} qodef-skin--dark {{else}} qodef-skin--light {{/ifCond}}">
         {{#ifCond store.navigations.header_menu '!==' undefined}}
@@ -204,7 +204,12 @@ visibility: visible !important;
             </div>
         </div>
     </div>
-    {{{form 'search' 'class="qodef-search-cover-form"'}}}
+
+    {{#widget name='banner' widget=section.widgets.banner}}
+        <p>{{ widget.settings.text }}</p>
+    {{/widget}}
+
+    {{#form 'search' 'class="qodef-search-cover-form"'}}
     <div class="qodef-m-inner">
         <input type="text" placeholder="Search" name="keywords" class="qodef-m-form-field" autocomplete="off" required />
         <a href="javascript:void(0)" class="qodef-opener-icon qodef-m qodef-source--svg-path qodef-m-close">
@@ -220,5 +225,5 @@ visibility: visible !important;
             </span>
         </a>
     </div>
-    {{{endform}}}
+    {{/form}}
 </header>

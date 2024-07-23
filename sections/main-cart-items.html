@@ -82,7 +82,7 @@
                 <td colspan="6" class="actions">
 
                     <discount-remove class="{{#ifCond cart.discount_applied '!=' true}} d-none {{/ifCond}}">
-                        {{{form 'remove-coupon'}}}
+                        {{#form 'remove-coupon'}}
                         <div class="coupon" style="align-items: center;">
                             <div class="applied-coupon-wrapper" style="margin-right: 15px;">
                                 {{{component 'applied-coupon'}}}
@@ -92,11 +92,11 @@
                                 {{{component 'loader'}}}
                             </button>
                         </div>
-                        {{{endform}}}
+                        {{/form}}
                     </discount-remove>
 
                     <discount-apply class="{{#ifCond cart.discount_applied '==' true}} d-none {{/ifCond}}">
-                        {{{form "apply-coupon"}}}
+                        {{#form "apply-coupon"}}
 
                         <div class="error {{#ifCond errors.coupon '===' undefined}} d-none {{/ifCond}}">
                             <p class="error-message">{{errors.coupon}}</p>
@@ -111,7 +111,7 @@
                                 {{{component 'loader'}}}
                             </button>
                         </div>
-                        {{{endform}}}
+                        {{/form}}
                     </discount-apply>
                 </td>
             </tr>

@@ -81,3 +81,9 @@
         </div>
     </a>
 </div>
+
+{{#widgets section.widgets}}
+    {{#ifCond widget.type '==' 'heading'}}
+        <{{widget.tag}}>{{widget.settings.text}}</{{widget.tag}}>
+    {{/ifCond}}
+{{/widgets}}
