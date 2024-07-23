@@ -7,7 +7,9 @@ const routes = {
     product_review: "/reviews",
     newsletter_signup: "/newsletter-signup",
     auth_login: "/account/login",
-    auth_register: "/account/register"
+    auth_register: "/account/register",
+    auth_forgot_password: "/account/forgot-password",
+    // auth_reset_password: "/account/reset-password/:id/:token"
 }
 
 function fetchConfig(type = 'json') {
