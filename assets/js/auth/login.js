@@ -3,7 +3,7 @@ if (!customElements.get('login-form')) {
     constructor() {
       super();
       
-      this.loginForm = this.querySelector('#login-form')
+      this.loginForm = this.querySelector('#login_form')
 
       if (this.loginDetail) {
           this.email.value = this.loginDetail.email;

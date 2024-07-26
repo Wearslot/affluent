@@ -3,7 +3,7 @@ if (!customElements.get('forgot-password')) {
     constructor() {
       super();
       
-      this.forgotForm = this.querySelector('#password-form')
+      this.forgotForm = this.querySelector('#password_form')
 
       this.feedback = this.querySelector('#feedback')
       this.feedback.classList.add('hidden')

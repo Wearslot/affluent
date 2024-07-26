@@ -3,7 +3,7 @@ if (!customElements.get('reset-form')) {
     constructor() {
       super();
       
-      this.resetForm = this.querySelector('#reset-form')
+      this.resetForm = this.querySelector('#reset_form')
 
       this.feedback = this.querySelector('#feedback')
       this.feedback.classList.add('hidden')

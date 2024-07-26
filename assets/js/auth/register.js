@@ -3,7 +3,7 @@ if (!customElements.get('register-form')) {
       constructor() {
           super();
           
-          this.registerForm = this.querySelector('#register-form');
+          this.registerForm = this.querySelector('#register_form');
 
           this.feedback = this.querySelector('#feedback');
           this.feedback.classList.add('hidden')
