@@ -65,6 +65,7 @@ if (!customElements.get('reset-form')) {
     activateLoadingState() {
       this.submitButton.disabled = true
       this.loadingSpinner.classList.remove('hidden');
+      this.feedback.classList.add('hidden')
     }
 
     deactivateLoadingState() {

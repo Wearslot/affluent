@@ -63,6 +63,7 @@ if (!customElements.get('login-form')) {
     activateLoadingState() {
       this.submitButton.disabled = true
       this.loadingSpinner.classList.remove('hidden');
+      this.feedback.classList.add('hidden')
     }
 
     deactivateLoadingState() {
