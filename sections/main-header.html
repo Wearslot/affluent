@@ -4,7 +4,7 @@ opacity: 1 !important;
 visibility: visible !important;
 }
 {{/styles}}
-<header id="qodef-page-header" role="banner" style="position: static; z-index: 100;">
+<header id="qodef-page-header" role="banner" style="position: fixed; z-index: 100;">
     <div id="qodef-page-header-inner"
         class="{{#ifCond page '!=' 'index'}} qodef-skin--dark {{else}} qodef-skin--light {{/ifCond}}">
         {{#ifCond store.navigations.header_menu '!==' undefined}}
@@ -166,7 +166,7 @@ visibility: visible !important;
                 
 
                 <div id="esmee_core_search_opener-2"
-                    class="widget widget_esmee_core_search_opener qodef-header-widget-area-one"
+                    class="widget widget_esmee_core_search_opener"
                     data-area="header-widget-one"><a href="javascript:void(0)"
                         class="qodef-opener-icon qodef-m qodef-source--svg-path qodef-search-opener">
                         <span class="qodef-m-icon qodef--open">
