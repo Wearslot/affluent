@@ -39,3 +39,12 @@ function renderComponents(selector, component) {
         element.innerHTML = component;
     })
 }
+
+window.onscroll = function () {
+    var header = document.getElementById("qodef-page-header-inner");
+    if (window.scrollY > 430) {
+        header.style.backgroundColor = "#ffffff";
+    } else {
+        header.style.backgroundColor = "transparent";
+    }
+};
