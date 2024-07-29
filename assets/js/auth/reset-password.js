@@ -27,12 +27,6 @@ if (!customElements.get('reset-form')) {
           this.feedback.innerText = "Passwords do not match"
         }
         else {
-          const config = fetchConfig();
-          config.body = JSON.stringify({
-            password: data.get('password'),
-            confirm_password: data.get('confirm-password')
-          })
-
           let currentUrl = window.location.href;
           let urlSegments = currentUrl.split('/');
 
@@ -40,7 +34,15 @@ if (!customElements.get('reset-form')) {
           const token = urlSegments[urlSegments.length - 1];
           const id = urlSegments[urlSegments.length - 2];
 
-          fetch(`/account/reset-password/${id}/${token}`, config)
+          const config = fetchConfig();
+          config.body = JSON.stringify({
+            password: data.get('password'),
+            confirm_password: data.get('confirm-password'),
+            id,
+            token
+          })
+
+          fetch(`${routes.auth_reset_password}`, config)
           .then(response => response.json())
           .then(data => {
             this.deactivateLoadingState()

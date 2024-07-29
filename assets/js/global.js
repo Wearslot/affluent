@@ -9,7 +9,7 @@ const routes = {
     auth_login: "/account/login",
     auth_register: "/account/register",
     auth_forgot_password: "/account/forgot-password",
-    // auth_reset_password: "/account/reset-password/:id/:token"
+    auth_reset_password: "/account/reset-password/"
 }
 
 function fetchConfig(type = 'json') {
