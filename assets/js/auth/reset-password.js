@@ -36,8 +36,6 @@ if (!customElements.get('reset-form')) {
             confirm_password: data.get('confirm-password')
           })
 
-          console.log(id, token)
-
           fetch(`/account/reset-password/${id}/${token}`, config)
           .then(response => response.json())
           .then(data => {
