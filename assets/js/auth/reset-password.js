@@ -20,6 +20,9 @@ if (!customElements.get('reset-form')) {
 
       const data = new FormData(this.resetForm)
 
+      const id = this.submitButton.getAttribute("data-params-id")
+      const token = this.submitButton.getAttribute("data-params-token")
+
       if (data.get('password') && data.get('confirm-password')) {
 
         if (data.get('password') !== data.get('confirm-password')) {
@@ -33,12 +36,7 @@ if (!customElements.get('reset-form')) {
             confirm_password: data.get('confirm-password')
           })
 
-          let currentUrl = window.location.href;
-          let urlSegments = currentUrl.split('/');
-
-          // Get the last two segments
-          const token = urlSegments[urlSegments.length - 1];
-          const id = urlSegments[urlSegments.length - 2];
+          console.log(id, token)
 
           fetch(`/account/reset-password/${id}/${token}`, config)
           .then(response => response.json())
