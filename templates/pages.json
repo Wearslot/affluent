@@ -5,5 +5,7 @@
             "type": "page"
         }
     },
-    "order": []
+    "order": [
+      "main-page"
+    ]
 }
