@@ -1,2 +1,0 @@
-error: getaddrinfo ENOTFOUND undefined {"code":"ENOTFOUND","errno":-3008,"hostname":"undefined","syscall":"getaddrinfo"}
-error: getaddrinfo ENOTFOUND undefined {"code":"ENOTFOUND","errno":-3008,"hostname":"undefined","syscall":"getaddrinfo"}

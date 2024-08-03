@@ -592,9 +592,6 @@
     <link rel="stylesheet" id="ppress-frontend-css"
         href="{{asset_url}}/vendor/plugins/wp-user-avatar/assets/css/frontend.minb2f9.css?ver=4.3.0" type="text/css"
         media="all" />
-    <link rel="stylesheet" id="ppress-flatpickr-css"
-        href="{{asset_url}}/vendor/plugins/wp-user-avatar/assets/flatpickr/flatpickr.minb2f9.css?ver=4.3.0"
-        type="text/css" media="all" />
     <link rel="stylesheet" id="swiper-css"
         href="{{asset_url}}/vendor/plugins/qi-addons-for-elementor/assets/plugins/swiper/swiper.min8f99.css?ver=6.5"
         type="text/css" media="all" />
@@ -705,7 +702,7 @@
             padding-right: 30px;
         }
     </style>
-    {{{styles}}}
+    {{#styles}}
         :root {
             --qode-main-color: {{store.settings.primary_color}} !important;
             --qode-header-light-color: {{store.settings.header_light_background}} !important;
@@ -713,12 +710,12 @@
             --qode-header-dark-color: {{store.settings.header_dark_background}} !important;
             --qode-header-dark-hover-color: {{store.settings.header_dark_hover_background}} !important;
         }
-    {{{endstyles}}}
+    {{/styles}}
     <link rel="stylesheet" id="esmee-core-elementor-css"
         href="{{asset_url}}/vendor/plugins/esmee-core/inc/plugins/elementor/assets/css/elementor.min8f99.css?ver=6.5"
         type="text/css" media="all" />
 
-    {{{styles}}}
+    {{#styles}}
         #qodef-woo-page .added_to_cart, #qodef-woo-page .button, #yith-quick-view-modal .added_to_cart, #yith-quick-view-modal .button, .qodef-woo-shortcode .added_to_cart, .qodef-woo-shortcode .button {
             background: {{store.settings.button_bg_color}} !important;
             color: {{store.settings.button_text_color}} !important;
@@ -749,7 +746,7 @@
             color: {{store.settings.button_text_color}} !important;
             letter-spacing: 0 !important;
         }
-    {{{endstyles}}}
+    {{/styles}}
     <link rel="stylesheet" id="elementor-icons-css"
         href="{{asset_url}}/vendor/plugins/elementor/assets/lib/eicons/css/elementor-icons.min91ce.css?ver=5.16.0"
         type="text/css" media="all" />
@@ -774,9 +771,6 @@
     <script type="text/javascript"
         src="{{asset_url}}/vendor/plugins/revslider/public/assets/js/rs6.min0660.js?ver=6.6.5" async
         id="revmin-js"></script>
-    <script type="text/javascript"
-        src="{{asset_url}}/vendor/plugins/wp-user-avatar/assets/flatpickr/flatpickr.minb2f9.js?ver=4.3.0"
-        id="ppress-flatpickr-js"></script>
     <link rel="canonical" href="/" />
 
 
@@ -866,10 +860,10 @@
             display: none;
         }
     </style>
-    {{{script}}}
+    {{#script}}
     window.currency_symbol = "{{currency.symbol}}"
     window.currency_code = "{{currency.code}}"
-    {{{endscript}}}
+    {{/script}}
 </head>
 
 <body

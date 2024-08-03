@@ -59,7 +59,7 @@
                     </div>
 
                     <product-form>
-                        {{{form 'product' 'class="variations_form cart"' product=product}}}
+                        {{#form 'product' 'class="variations_form cart"' product=product}}
                         <table class="variations" cellspacing="0" role="presentation">
                             <tbody>
                                 {{#ifCond product.has_variations '===' true}}
@@ -123,7 +123,7 @@
                                         value="{{product.default_or_selected_variant_id}}" />
                             </div>
                         </div>
-                        {{{endform}}}
+                        {{/form}}
                     </product-form>
 
                     <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2510  wishlist-fragment on-first-load">

@@ -1,11 +1,11 @@
 <li class="qodef-woo-mini-cart-item qodef-e" cart-item="{{item.id}}">
-    {{{form "remove-item" item=item}}}
+    {{#form "remove-item" item=item}}
     <button type="submit" class="qodef-e-remove remove remove_from_cart_button"
         aria-label="Remove this item">
         <span class="qodef-icon-elegant-icons icon_close button_text"></span>
         {{{component 'loader'}}}
     </button>
-    {{{endform}}}
+    {{/form}}
     <div class="qodef-e-image">
         <a href="{{url}}"><img width="600" height="780" src="{{item.image}}"
                 class="attachment-taojaa_thumbnail size-taojaa_thumbnail" alt="f"
