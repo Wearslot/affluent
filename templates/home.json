@@ -3,18 +3,24 @@
     "sections": {
         "hero": {
             "type": "home-hero",
-            "widgets": [
-                {
+            "available_types": [
+                "home-hero",
+                "video"
+            ],
+            "widgets": {
+                "heading": {
                     "type": "heading",
                     "tag": "h2",
-                    "settings": {}
+                    "settings": {
+                        "text": "How are your doing today?"
+                    }
                 },
-                {
+                "navigation": {
                     "type": "navigation",
                     "handle": "header_menu",
                     "settings": {}
                 }
-            ]
+            }
         },
         "featured-products": {
             "type": "featured-products",
