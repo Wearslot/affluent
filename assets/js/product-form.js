@@ -8,6 +8,7 @@ if (!customElements.get('product-form')) {
             this.submitButton = this.querySelector('[type="submit"]');
 
             this.error = this.querySelector('.error');
+            this.success = this.querySelector('.success');
             this.cart = document.querySelector("cart-summary") || document.querySelector('cart-notification');
         }
 
@@ -22,7 +23,7 @@ if (!customElements.get('product-form')) {
             const formData = new FormData(this.form);
             const url = this.form.getAttribute("action");
 
-            const components = this.cart.getAffectedComponents();
+            const components = this.cart ? this.cart.getAffectedComponents() : [];
             formData.append('components', JSON.stringify(components.map(component => component.id)));
 
             const config = fetchConfig();
@@ -32,12 +33,15 @@ if (!customElements.get('product-form')) {
                 .then(response => response.json())
                 .then(response => {
 
-                    if (response.status) {
+                    if (response.status == "error") {
                         return this.handleError(response.message);
                     }
 
-                    this.cart.updateAffectedCoponents(components, response);
-                    this.cart.show();
+                    if (this.cart) {
+                        this.cart.updateAffectedCoponents(components, response);
+                    }
+
+                    this.handleSuccess(response.message);
 
                 }).catch((error) => {
                     console.log(error);
@@ -75,6 +79,11 @@ if (!customElements.get('product-form')) {
             this.submitButton.querySelector(".button_text").classList.remove('hidden');
             this.submitButton.querySelector('.loading__spinner').classList.add('hidden');
         }
+
+        handleSuccess(message) {
+            this.success.querySelector('.success-message').textContent = message || 'Item added to cart!';
+            this.success.classList.remove('d-none');
+        };
 
         handleError(error) {
             if (!this.error) return;

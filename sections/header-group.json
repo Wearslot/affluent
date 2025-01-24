@@ -1,30 +1,30 @@
 {
     "sections": {
-        "announcement": {
-            "type": "announcement",
-            "settings": {
-                "show": false
-            }
-        },
         "header": {
             "type": "header",
-            "available_types": [
-                "header"
-            ],
             "widgets": {
-                "banner": {
-                    "type": "paragraph",
+                "header_top": {
                     "settings": {
-                        "text": "Hello How are you doing today"
+                        "show": true
                     }
-
+                },
+                "announcement": {
+                    "settings": {
+                        "text": "Free shipping, 30-day return or refund guarantee."
+                    }
+                },
+                "navigation": {
+                    "type": "navigation",
+                    "handle": "header_menu",
+                    "settings": {}
                 }
             },
-            "settings": {}
+            "settings": {
+                "show_collection_dropdown": true
+            }
         }
     },
     "order": [
-        "announcement",
         "header"
     ]
 }

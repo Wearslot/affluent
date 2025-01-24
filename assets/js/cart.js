@@ -95,14 +95,14 @@ if (!customElements.get('cart-items')) {
         }
 
         toggleState(empty) {
-            if (!empty) {
-                document.querySelector('.empty-cart').classList.add('d-none')
-                document.querySelector('.main-cart-wrapper').classList.remove('d-none');
-                return;
-            }
+            // if (!empty) {
+            //     document.querySelector('.empty-cart').classList.add('d-none')
+            //     document.querySelector('.main-cart-wrapper').classList.remove('d-none');
+            //     return;
+            // }
 
-            document.querySelector('.empty-cart').classList.remove('d-none');
-            document.querySelector('.main-cart-wrapper').classList.add('d-none');
+            // document.querySelector('.empty-cart').classList.remove('d-none');
+            // document.querySelector('.main-cart-wrapper').classList.add('d-none');
         }
 
         handleErrors(error) {

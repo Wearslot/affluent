@@ -1,7 +1,7 @@
 {
-    "layout": "catalogs",
+    "layout": "main",
     "sections": {
-        "details": {
+        "product": {
             "type": "product/main-details",
             "settings": {}
         },
@@ -14,7 +14,10 @@
         }
     },
     "order": [
-        "details",
+        "product",
         "similar_products"
-    ]
+    ],
+    "data": {
+        "collections": true
+    }
 }

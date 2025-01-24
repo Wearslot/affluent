@@ -1,205 +1,46 @@
-<section
-    class="elementor-section elementor-top-section elementor-element elementor-element-c1deba2 qodef-elementor-content-grid elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-    data-id="c1deba2" data-element_type="section">
-    <div class="elementor-container elementor-column-gap-default">
-        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d7b8674"
-            data-id="d7b8674" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-b49c374 elementor-widget__width-initial elementor-widget elementor-widget-esmee_core_section_title"
-                    data-id="b49c374" data-element_type="widget" data-widget_type="esmee_core_section_title.default">
-                    <div class="elementor-widget-container">
-                        <div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--left ">
-                            <h6 class="qodef-m-subtitle">LOVE SHOPPING</h6>
-                            <h2 class="qodef-m-title">
-                                For shopaholics </h2>
-                            <p class="qodef-m-text"> </p>
-                        </div>
-                    </div>
+{{#if section.settings.show}}
+<section class="latest spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>{{ section.settings.title }}</span>
+                    <h2>{{ section.settings.heading }}</h2>
                 </div>
             </div>
         </div>
-        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e993e91"
-            data-id="e993e91" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-bade9d1 elementor-widget__width-auto elementor-widget elementor-widget-esmee_core_button"
-                    data-id="bade9d1" data-element_type="widget" data-widget_type="esmee_core_button.default">
-                    <div class="elementor-widget-container">
-                        <a class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link"
-                            href="left-sidebar/index.html" target="_self">
-                            <span class="qodef-m-text">Read more</span>
-                        </a>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic set-bg" data-setbg="{{asset_url}}/img/blog/blog-1.jpg"></div>
+                    <div class="blog__item__text">
+                        <span><img src="{{asset_url}}/img/icon/calendar.png" alt=""> 16 February 2020</span>
+                        <h5>What Curling Irons Are The Best Ones</h5>
+                        <a href="#">Read More</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section
-    class="elementor-section elementor-top-section elementor-element elementor-element-82fd7e0 qodef-elementor-content-grid elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-    data-id="82fd7e0" data-element_type="section">
-    <div class="elementor-container elementor-column-gap-default">
-        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-12519e5"
-            data-id="12519e5" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-49573fb elementor-widget elementor-widget-esmee_core_blog_list"
-                    data-id="49573fb" data-element_type="widget" data-widget_type="esmee_core_blog_list.default">
-                    <div class="elementor-widget-container">
-                        <div class="qodef-shortcode qodef-m  qodef-blog qodef--list qodef-item-layout--standard qodef-zig-zag-layout qodef-hover-animation--yes qodef-appear-animation--yes qodef-grid qodef-layout--columns  qodef-gutter--normal qodef-col-num--3   qodef-item-layout--standard qodef--no-bottom-space qodef-pagination--off qodef-responsive--custom qodef-col-num--1440--3 qodef-col-num--1366--3 qodef-col-num--1024--3 qodef-col-num--768--1 qodef-col-num--680--1 qodef-col-num--480--1"
-                            data-options="{&quot;plugin&quot;:&quot;esmee_core&quot;,&quot;module&quot;:&quot;blog\/shortcodes&quot;,&quot;shortcode&quot;:&quot;blog-list&quot;,&quot;post_type&quot;:&quot;post&quot;,&quot;next_page&quot;:&quot;2&quot;,&quot;max_pages_num&quot;:1,&quot;behavior&quot;:&quot;columns&quot;,&quot;images_proportion&quot;:&quot;full&quot;,&quot;columns&quot;:&quot;3&quot;,&quot;columns_responsive&quot;:&quot;custom&quot;,&quot;columns_1440&quot;:&quot;3&quot;,&quot;columns_1366&quot;:&quot;3&quot;,&quot;columns_1024&quot;:&quot;3&quot;,&quot;columns_768&quot;:&quot;1&quot;,&quot;columns_680&quot;:&quot;1&quot;,&quot;columns_480&quot;:&quot;1&quot;,&quot;space&quot;:&quot;normal&quot;,&quot;posts_per_page&quot;:&quot;3&quot;,&quot;orderby&quot;:&quot;date&quot;,&quot;order&quot;:&quot;ASC&quot;,&quot;additional_params&quot;:&quot;tax&quot;,&quot;tax&quot;:&quot;category&quot;,&quot;tax_slug&quot;:&quot;style&quot;,&quot;layout&quot;:&quot;standard&quot;,&quot;title_tag&quot;:&quot;h3&quot;,&quot;excerpt_length&quot;:&quot;75&quot;,&quot;zig_zag&quot;:&quot;yes&quot;,&quot;hover_animation&quot;:&quot;yes&quot;,&quot;appear_animation&quot;:&quot;yes&quot;,&quot;pagination_type&quot;:&quot;no-pagination&quot;,&quot;object_class_name&quot;:&quot;EsmeeCore_Blog_List_Shortcode&quot;,&quot;taxonomy_filter&quot;:&quot;category&quot;,&quot;additional_query_args&quot;:{&quot;tax_query&quot;:[{&quot;taxonomy&quot;:&quot;category&quot;,&quot;field&quot;:&quot;slug&quot;,&quot;terms&quot;:&quot;style&quot;}]},&quot;space_value&quot;:15}">
-                            <div class="qodef-grid-inner clear">
-                                <article
-                                    class="qodef-e qodef-blog-item qodef-grid-item qodef-item--full post-2460 post type-post status-publish format-standard has-post-thumbnail hentry category-style tag-beauty tag-fashion tag-trendy">
-                                    <div class="qodef-e-inner">
-                                        <a itemprop="dateCreated" href="2021/07/index.html"
-                                            class="entry-date published updated">
-                                            <span class="qodef-time-day">23</span>
-                                            <span class="qodef-time-month">Jul</span>
-                                        </a>
-                                        <div class="qodef-e-media">
-                                            <div class="qodef-e-media-image">
-                                                <a itemprop="url" href="spring-essentials-minimal-style/index.html">
-                                                    <img loading="lazy" decoding="async" width="1300" height="1778"
-                                                        src="vendor/uploads/2021/07/h1-img-11.jpg"
-                                                        class="attachment-full size-full" alt="s"
-                                                        srcset="https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-11.jpg 1300w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-11-219x300.jpg 219w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-11-749x1024.jpg 749w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-11-768x1050.jpg 768w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-11-1123x1536.jpg 1123w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-11-600x821.jpg 600w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-11-800x1094.jpg 800w"
-                                                        sizes="(max-width: 1300px) 100vw, 1300px" /> </a>
-                                            </div>
-                                        </div>
-                                        <div class="qodef-e-content">
-                                            <div class="qodef-e-top-holder">
-                                                <div class="qodef-e-info">
-                                                    <a href="category/style/index.html" rel="tag">Style</a>
-                                                    <div class="qodef-info-separator-end"></div>
-                                                </div>
-                                            </div>
-                                            <div class="qodef-e-text">
-                                                <h3 itemprop="name" class="qodef-e-title entry-title">
-                                                    <a itemprop="url" class="qodef-e-title-link"
-                                                        href="spring-essentials-minimal-style/index.html">
-                                                        We Rank the 5 Best Perfumes for Women </a>
-                                                </h3>
-                                                <p itemprop="description" class="qodef-e-excerpt">Lorem ipsum dolor sit
-                                                    amet, consectetur adipiscing elit, sed do eiusmod tem</p>
-                                            </div>
-                                            <div class="qodef-e-bottom-holder">
-                                                <div class="qodef-e-left">
-                                                    <div class="qodef-e-read-more">
-                                                        <a class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link"
-                                                            href="spring-essentials-minimal-style/index.html"
-                                                            target="_self"> <span class="qodef-m-text">Read
-                                                                More</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="qodef-e-right qodef-e-info">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article
-                                    class="qodef-e qodef-blog-item qodef-grid-item qodef-item--full post-2503 post type-post status-publish format-standard has-post-thumbnail hentry category-style tag-beauty tag-fashion tag-trendy">
-                                    <div class="qodef-e-inner">
-                                        <a itemprop="dateCreated" href="2021/07/index.html"
-                                            class="entry-date published updated">
-                                            <span class="qodef-time-day">23</span>
-                                            <span class="qodef-time-month">Jul</span>
-                                        </a>
-                                        <div class="qodef-e-media">
-                                            <div class="qodef-e-media-image">
-                                                <a itemprop="url" href="reviews-from-tokyo-fashion-week/index.html">
-                                                    <img loading="lazy" decoding="async" width="1300" height="1778"
-                                                        src="vendor/uploads/2021/07/h1-img-12.jpg"
-                                                        class="attachment-full size-full" alt="s"
-                                                        srcset="https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-12.jpg 1300w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-12-219x300.jpg 219w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-12-749x1024.jpg 749w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-12-768x1050.jpg 768w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-12-1123x1536.jpg 1123w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-12-600x821.jpg 600w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-12-800x1094.jpg 800w"
-                                                        sizes="(max-width: 1300px) 100vw, 1300px" /> </a>
-                                            </div>
-                                        </div>
-                                        <div class="qodef-e-content">
-                                            <div class="qodef-e-top-holder">
-                                                <div class="qodef-e-info">
-                                                    <a href="category/style/index.html" rel="tag">Style</a>
-                                                    <div class="qodef-info-separator-end"></div>
-                                                </div>
-                                            </div>
-                                            <div class="qodef-e-text">
-                                                <h3 itemprop="name" class="qodef-e-title entry-title">
-                                                    <a itemprop="url" class="qodef-e-title-link"
-                                                        href="reviews-from-tokyo-fashion-week/index.html">
-                                                        Reviews From Tokyo Fashion Week &#8217;21 </a>
-                                                </h3>
-                                                <p itemprop="description" class="qodef-e-excerpt">Lorem ipsum dolor sit
-                                                    amet, consectetur adipiscing elit, sed do eiusmod tem</p>
-                                            </div>
-                                            <div class="qodef-e-bottom-holder">
-                                                <div class="qodef-e-left">
-                                                    <div class="qodef-e-read-more">
-                                                        <a class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link"
-                                                            href="reviews-from-tokyo-fashion-week/index.html"
-                                                            target="_self"> <span class="qodef-m-text">Read
-                                                                More</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="qodef-e-right qodef-e-info">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article
-                                    class="qodef-e qodef-blog-item qodef-grid-item qodef-item--full post-2506 post type-post status-publish format-standard has-post-thumbnail hentry category-style tag-beauty tag-fashion tag-trendy">
-                                    <div class="qodef-e-inner">
-                                        <a itemprop="dateCreated" href="2021/07/index.html"
-                                            class="entry-date published updated">
-                                            <span class="qodef-time-day">23</span>
-                                            <span class="qodef-time-month">Jul</span>
-                                        </a>
-                                        <div class="qodef-e-media">
-                                            <div class="qodef-e-media-image">
-                                                <a itemprop="url" href="things-that-are-odd-and-imperfect/index.html">
-                                                    <img loading="lazy" decoding="async" width="1300" height="1778"
-                                                        src="vendor/uploads/2021/07/h1-img-13.jpg"
-                                                        class="attachment-full size-full" alt="s"
-                                                        srcset="https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-13.jpg 1300w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-13-219x300.jpg 219w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-13-749x1024.jpg 749w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-13-768x1050.jpg 768w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-13-1123x1536.jpg 1123w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-13-600x821.jpg 600w, https://esmee.qodeinteractive.com/vendor/uploads/2021/07/h1-img-13-800x1094.jpg 800w"
-                                                        sizes="(max-width: 1300px) 100vw, 1300px" /> </a>
-                                            </div>
-                                        </div>
-                                        <div class="qodef-e-content">
-                                            <div class="qodef-e-top-holder">
-                                                <div class="qodef-e-info">
-                                                    <a href="category/style/index.html" rel="tag">Style</a>
-                                                    <div class="qodef-info-separator-end"></div>
-                                                </div>
-                                            </div>
-                                            <div class="qodef-e-text">
-                                                <h3 itemprop="name" class="qodef-e-title entry-title">
-                                                    <a itemprop="url" class="qodef-e-title-link"
-                                                        href="things-that-are-odd-and-imperfect/index.html">
-                                                        Just figuring Out My Life… Wanna Come?? </a>
-                                                </h3>
-                                                <p itemprop="description" class="qodef-e-excerpt">Lorem ipsum dolor sit
-                                                    amet, consectetur adipiscing elit, sed do eiusmod tem</p>
-                                            </div>
-                                            <div class="qodef-e-bottom-holder">
-                                                <div class="qodef-e-left">
-                                                    <div class="qodef-e-read-more">
-                                                        <a class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link"
-                                                            href="things-that-are-odd-and-imperfect/index.html"
-                                                            target="_self"> <span class="qodef-m-text">Read
-                                                                More</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="qodef-e-right qodef-e-info">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic set-bg" data-setbg="{{asset_url}}/img/blog/blog-2.jpg"></div>
+                    <div class="blog__item__text">
+                        <span><img src="{{asset_url}}/img/icon/calendar.png" alt=""> 21 February 2020</span>
+                        <h5>Eternity Bands Do Last Forever</h5>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic set-bg" data-setbg="{{asset_url}}/img/blog/blog-3.jpg"></div>
+                    <div class="blog__item__text">
+                        <span><img src="{{asset_url}}/img/icon/calendar.png" alt=""> 28 February 2020</span>
+                        <h5>The Health Benefits Of Sunglasses</h5>
+                        <a href="#">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+{{/if}}
