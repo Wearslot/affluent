@@ -5,7 +5,7 @@ const routes = {
     discount_apply: "/discount/apply",
     discount_remove: "/discount/remove",
     product_review: "/review/add",
-    newsletter_signup: "/newsletter-signup",
+    newsletter_signup: "/newsletter",
     auth_login: "/account/login",
     auth_register: "/account/register",
     auth_forgot_password: "/account/forgot-password",
@@ -39,12 +39,3 @@ function renderComponents(selector, component) {
         element.innerHTML = component;
     })
 }
-
-window.onscroll = function () {
-    var header = document.getElementById("qodef-page-header-inner");
-    if (window.scrollY > 430) {
-        header.style.backgroundColor = "#ffffff";
-    } else {
-        header.style.backgroundColor = "transparent";
-    }
-};

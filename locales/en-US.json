@@ -1,3 +1,5 @@
 {
-    "login_message": "Login successful"
+    "general": {
+        "login_message": "Login Successful"
+    }
 }

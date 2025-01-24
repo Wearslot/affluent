@@ -1,5 +1,12 @@
 {
-    "layout": "",
-    "sections": {},
+    "layout": "main",
+    "sections": {
+        "main-blog": {
+            "type": "main-blog",
+            "settings": {
+                
+            }
+        }
+    },
     "order": []
 }

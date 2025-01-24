@@ -1,11 +1,11 @@
 {
-    "layout": "",
+    "layout": "main",
     "sections": {
         "main-page": {
             "type": "page"
         }
     },
     "order": [
-      "main-page"
+        "main-page"
     ]
 }

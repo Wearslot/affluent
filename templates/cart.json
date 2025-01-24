@@ -1,5 +1,5 @@
 {
-    "layout": "catalogs",
+    "layout": "main",
     "sections": {
         "main-cart": {
             "type": "main-cart",
@@ -8,5 +8,8 @@
     },
     "order": [
         "main-cart"
-    ]
+    ],
+    "data": {
+        "collections": true
+    }
 }

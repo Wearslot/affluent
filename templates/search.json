@@ -1,12 +1,15 @@
 {
-    "layout": "catalogs",
+    "layout": "main",
     "sections": {
         "main-search": {
-            "type": "main-search",
+            "type": "catalog",
             "settings": {}
         }
     },
     "order": [
         "main-search"
-    ]
+    ],
+    "data": {
+        "collections": true
+    }
 }

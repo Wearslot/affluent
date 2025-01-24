@@ -1,5 +1,17 @@
 {
-    "layout": "",
-    "sections": {},
-    "order": []
+    "layout": "main",
+    "sections": {
+        "collections": {
+            "type": "main-collections",
+            "settings": {}
+        }
+    },
+    "order": [
+        "collections"
+    ],
+    "data": {
+        "collections": {
+            "product_count": true
+        }
+    }
 }

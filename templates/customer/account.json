@@ -1,5 +1,11 @@
 {
     "layout": "",
-    "sections": {},
-    "order": []
+    "sections": {
+        "main": {
+            "type": "customer/main-account"
+        }
+    },
+    "order": [
+        "main"
+    ]
 }
