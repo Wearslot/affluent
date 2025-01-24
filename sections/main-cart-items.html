@@ -57,12 +57,13 @@
                             </label>
                             <span class="qodef-quantity-minus minus"></span>
                             <input type="text" id="cart-item__quantity_{{current.id}}"
-                                data-line="{{add current.index 1}}"
                                 class="input-text qty text qodef-quantity-input cart-item__quantity"
+                                data-line="{{add current.index 1}}"
                                 data-step="{{current.default_or_selected_variant.quantity_rule.step}}"
                                 data-min="{{current.default_or_selected_variant.quantity_rule.min}}"
                                 data-max="{{current.default_or_selected_variant.quantity_rule.max}}" name="quantity[]"
-                                value="{{current.quantity}}" title="Qty" placeholder="" inputmode="numeric">
+                                value="{{current.quantity}}" 
+                                title="Qty" placeholder="" inputmode="numeric">
                             <span class="qodef-quantity-plus plus"></span>
                         </div>
                     </quantity-field>

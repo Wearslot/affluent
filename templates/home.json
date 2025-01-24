@@ -4,8 +4,14 @@
         "hero": {
             "type": "home-hero",
             "available_types": [
-                "home-hero",
-                "video"
+                {
+                    "label": "Video Hero",
+                    "value": "video"
+                },
+                {
+                    "label": "Slideshow",
+                    "value": "home-hero"
+                },
             ],
             "widgets": {
                 "heading": {
