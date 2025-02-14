@@ -1,8 +1,8 @@
 {
-    "layout": "main",
+    "layout": "catalogs",
     "sections": {
         "main-search": {
-            "type": "catalog",
+            "type": "main-search",
             "settings": {}
         }
     },

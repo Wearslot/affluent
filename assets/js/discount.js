@@ -63,7 +63,7 @@ if (!customElements.get('discount-apply')) {
                 .then(response => response.json())
                 .then(response => {
 
-                    if (response.status == 'error') {
+                    if (response.status) {
                         this.handleError(response.message);
                     }
 
@@ -84,8 +84,8 @@ if (!customElements.get('discount-apply')) {
         getAffectedComponents() {
             return [
                 {
-                    id: 'coupon-form',
-                    selector: '.coupon-form'
+                    id: 'applied-coupon',
+                    selector: '.applied-coupon-wrapper'
                 },
                 {
                     id: 'cart-discount-amount',
@@ -125,7 +125,7 @@ if (!customElements.get('discount-remove')) {
                 .then(response => response.json())
                 .then(response => {
 
-                    if (response.status == 'error') {
+                    if (response.status) {
                         this.handleError(response.message);
                     }
 

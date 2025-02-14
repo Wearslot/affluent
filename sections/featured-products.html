@@ -1,113 +1,104 @@
-{{#if section.settings.show}}
-<section class="product spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="filter__controls">
-                    <li class="active" data-filter="*" style="font-size: {{section.settings.heading_size}}px;">{{section.settings.heading}}</li>
-                </ul>
-            </div>
-        </div>
-
-        {{#ifCond best_selling.data.length '>' 0}}
-        <div class="row product__filter">
-            {{#iterate best_selling as="product"}}
-            <div
-                class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix {{#iterate product.collections as='pcol'}} {{pcol.slug}} {{/iterate}}">
-                <div class="product__item">
-                    <a href="/product/{{product.slug}}">
-                        <div class="product__item__pic set-bg" data-product-id="{{product.id}}"
-                            data-setbg="{{ product.image.main }}">
-                            {{#ifCond product.discount ">" 0}}
-                            <span class="label">Sale</span>
-                            {{/ifCond}}
-                            <!-- <ul class="product__hover">
-                                    <li><a href="#"><img src="{{asset_url}}/img/icon/heart.png" alt=""></a></li>
-                                    <li><a href="#"><img src="{{asset_url}}/img/icon/compare.png" alt=""> <span>Compare</span></a>
-                                    </li>
-                                    <li><a href="#"><img src="{{asset_url}}/img/icon/search.png" alt=""></a></li>
-                                </ul> -->
+<section
+    class="elementor-section elementor-top-section elementor-element elementor-element-3abb3ef qodef-elementor-content-grid elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    data-id="3abb3ef" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-defcbd8"
+            data-id="defcbd8" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-83eeb00 elementor-widget elementor-widget-esmee_core_section_title"
+                    data-id="83eeb00" data-element_type="widget" data-widget_type="esmee_core_section_title.default">
+                    <div class="elementor-widget-container">
+                        <div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center ">
+                            <h6 class="qodef-m-subtitle" style="margin-bottom: -5px">{{ section.settings.subtitle }}
+                            </h6>
+                            <h1 class="qodef-m-title">{{ section.settings.title }} </h1>
+                            <p class="qodef-m-text"> </p>
                         </div>
-                    </a>
-                    <div class="product__item__text">
-                        <h6>{{ product.name }}</h6>
-                        <a href="/product/{{product.slug}}" class="add-cart">+ Add To Cart</a>
-                        <div class="rating" data-rate="{{ product.rating }}">
-                        </div>
-                        <h5>{{{ product_price product }}}</h5>
-                        {{#if product.has_variations}}
-                        <div class="product__color__select">
-                            {{#iterate product.variations}}
-                            {{#ifCond current.group.name '==' 'Colors'}}
-                            <label style="background-color: {{current.name}};"
-                                class="color-switch {{#ifCond current.index '==' 0}} active {{/ifCond}}"
-                                for="pc-{{current.index}}" data-variation="{{json current}}"
-                                data-options="{{json product.variation_options}}" data-target="{{product.id}}">
-                                <input type="radio" id="pc-{{current.index}}">
-                            </label>
-                            {{/ifCond}}
-                            {{/iterate}}
-                        </div>
-                        {{/if}}
                     </div>
                 </div>
             </div>
-            {{/iterate}}
         </div>
-        {{/ifCond}}
-
-        {{#unless best_selling.data.length}}
-        {{#ifCond featured_products.data.length '>' 0}}
-        <div class="row product__filter">
-            {{#iterate featured_products as="product"}}
-            <div
-                class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix {{#iterate product.collections as='pcol'}} {{pcol.slug}} {{/iterate}}">
-                <div class="product__item">
-                    <a href="/product/{{product.slug}}">
-                        <div class="product__item__pic set-bg" data-product-id="{{product.id}}"
-                            data-setbg="{{ product.image.main }}">
-                            {{#ifCond product.discount ">" 0}}
-                            <span class="label">Sale</span>
-                            {{/ifCond}}
-                            <!-- <ul class="product__hover">
-                                        <li><a href="#"><img src="{{asset_url}}/img/icon/heart.png" alt=""></a></li>
-                                        <li><a href="#"><img src="{{asset_url}}/img/icon/compare.png" alt=""> <span>Compare</span></a>
-                                        </li>
-                                        <li><a href="#"><img src="{{asset_url}}/img/icon/search.png" alt=""></a></li>
-                                    </ul> -->
-                        </div>
-                    </a>
-                    <div class="product__item__text">
-                        <h6>{{ product.name }}</h6>
-                        <a href="/product/{{product.slug}}" class="add-cart">+ Add To Cart</a>
-                        <div class="rating" data-rate="{{ product.rating }}">
-                        </div>
-                        <h5>{{{ product_price product }}}</h5>
-                        {{#if product.has_variations}}
-                        <div class="product__color__select">
-                            {{#iterate product.variations}}
-                            {{#ifCond current.group.name '==' 'Colors'}}
-                            <label style="background-color: {{current.name}};"
-                                class="color-switch {{#ifCond current.index '==' 0}} active {{/ifCond}}"
-                                for="pc-{{current.index}}" data-variation="{{json current}}"
-                                data-options="{{json product.variation_options}}" data-target="{{product.id}}">
-                                <input type="radio" id="pc-{{current.index}}">
-                            </label>
-                            {{/ifCond}}
-                            {{/iterate}}
-                        </div>
-                        {{/if}}
-                    </div>
-                </div>
-            </div>
-            {{/iterate}}
-        </div>
-        {{/ifCond}}
-        {{/unless}}
-
-
     </div>
 </section>
 
-<script type="text/javascript" src="{{asset_url}}/js/product-variant-switch.js"></script>
-{{/if}}
+<section
+    class="elementor-section elementor-top-section elementor-element elementor-element-d1f2fcb qodef-elementor-content-grid elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    data-id="d1f2fcb" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3b4db57"
+            data-id="3b4db57" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-4e03fd4 elementor-widget elementor-widget-esmee_core_product_list"
+                    data-id="4e03fd4" data-element_type="widget" data-widget_type="esmee_core_product_list.default">
+                    <div class="elementor-widget-container">
+                        <div
+                            class="qodef-shortcode qodef-m  qodef-woo-shortcode qodef-woo-product-list qodef-item-layout--info-below qodef-appear-animation--no qodef-grid qodef-layout--columns  qodef-gutter--normal qodef-col-num--3   qodef-item-layout--info-below qodef--no-bottom-space qodef-pagination--off qodef-responsive--custom qodef-col-num--1440--3 qodef-col-num--1366--3 qodef-col-num--1024--3 qodef-col-num--768--1 qodef-col-num--680--1 qodef-col-num--480--1">
+                            <ul class="qodef-grid-inner clear">
+                                {{#iterate featured_products}}
+                                <li
+                                    class="qodef-e qodef-grid-item qodef-item--full product type-product post-2409 status-publish first instock product_cat-summer product_tag-variable has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+                                    <div class="qodef-e-inner">
+                                        <div class="qodef-woo-product-image">
+                                            {{#ifCond current.discount '>' 0}}<span
+                                                class="qodef-woo-product-mark qodef-new">Sale</span> {{/ifCond}}
+                                            <img loading="lazy" decoding="async" width="800" height="1040"
+                                                src="{{ current.image.main }}"
+                                                class="attachment-full size-full wp-post-image" alt="{{current.name}}"
+                                                sizes="(max-width: 800px) 100vw, 800px" />
+                                            <div class="qodef-woo-product-image-inner">
+                                                <div class="qodef-additional-content">
+                                                    <div
+                                                        class="yith-wcwl-add-to-wishlist add-to-wishlist-2409  wishlist-fragment on-first-load">
+
+                                                        <!-- <div class="yith-wcwl-add-button">
+                                                            <a href="{{ current.id }}"
+                                                                class="add_to_wishlist single_add_to_wishlist"
+                                                                data-product-type="variable"
+                                                                data-title="Add to wishlist" rel="nofollow">
+                                                                <i class="yith-wcwl-icon fa fa-heart-o"></i>
+                                                                <span>Add to wishlist</span>
+                                                            </a>
+                                                        </div> -->
+
+                                                    </div>
+                                                    <a href="#" class="button yith-wcqv-button quick-view-btn"
+                                                        data-slug="{{current.slug}}"> 
+                                                        <i class="yith-wcwl-icon fa fa-eye" style="padding-bottom: 5px;" data-slug="{{current.slug}}">
+                                                            <span data-slug="{{current.slug}}">Quick View</span>
+                                                        </i></a>
+                                                </div>
+                                            </div>
+                                            <a href="/product/{{current.slug}}"
+                                                class="taojaa-LoopProduct-link taojaa-loop-product__link"></a>
+                                        </div>
+                                        <div class="qodef-woo-product-content">
+                                            <div class="qodef-woo-product-content-top">
+                                                <h4 itemprop="name" class="qodef-woo-product-title entry-title">
+                                                    <a itemprop="url" class="qodef-woo-product-title-link"
+                                                        href="/product/{{current.slug}}">{{current.name}} </a>
+                                                </h4>
+                                                <div class="qodef-woo-product-categories qodef-e-info"><a
+                                                        href="/category/{{current.collection.slug}}"
+                                                        rel="tag">{{current.collection.name}}</a>
+                                                </div>
+                                                <div class="qodef-info-separator-end"></div>
+                                            </div>
+                                            <div class="qodef-woo-product-price price">
+                                                <span class="taojaa-Price-amount amount">
+                                                    <span class="taojaa-Price-currencySymbol">{{{product_price
+                                                        current}}}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {{/iterate }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="{{asset_url}}/js/quick-view.js"></script>

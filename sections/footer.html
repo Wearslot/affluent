@@ -1,68 +1,145 @@
-<!-- Footer Section Begin -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer__about">
-                    {{#widget name="footer_logo"}}
-                    <div class="footer__logo">
-                        <a href="#"><img src="{{widget.settings.image}}" alt=""></a>
+<footer id="qodef-page-footer" role="contentinfo">
+    <div id="qodef-page-footer-top-area">
+        <div id="qodef-page-footer-top-area-inner" class="qodef-content-grid">
+            <div
+                class="qodef-grid qodef-layout--columns qodef-responsive--custom qodef-col-num--4 qodef-col-num--1024--2 qodef-col-num--768--2 qodef-col-num--680--1 qodef-col-num--480--1">
+                <div class="qodef-grid-inner clear">
+                    <div class="qodef-grid-item">
+                        <div id="text-3" class="widget widget_text" data-area="qodef-footer-top-area-column-1">
+                            <div class="textwidget">
+                                <p><a href="index.html"> <img loading="lazy" decoding="async"
+                                            class="alignnone size-full wp-image-449" style="margin-top: -23px;"
+                                            src="{{ store.logo }}" alt="{{ store.name }}" width="120" height="35" /></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="text-5" class="widget widget_text" data-area="qodef-footer-top-area-column-1">
+                            <div class="textwidget">
+                                <p style="margin: 4px 0 0;">{{ store.description }}</p>
+                            </div>
+                        </div>
+                        <div id="text-4" class="widget widget_text" data-area="qodef-footer-top-area-column-1">
+                            <div class="textwidget">
+                                <p style="margin-top: -6px;"><a href="tel:{{store.phone}}">{{store.phone}}</a></p>
+                            </div>
+                        </div>
                     </div>
-                    {{/widget}}
-                    <p>{{store.description}}</p>
-                    <a href="#"><img src="{{asset_url}}/img/payment.png" alt=""></a>
-                </div>
-            </div>
-            {{#widget name="quick_links"}}
-            <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
-                <div class="footer__widget">
-                    <h6>{{ widget.settings.heading }}</h6>
-                    <ul>
-                        {{#iterate store.navigations.footer_menu}}
-                        <li><a href="{{ current.url }}">{{ current.name }}</a></li>
-                        {{/iterate}}
-                    </ul>
-                </div>
-            </div>
-            {{/widget}}
-            <div class="col-lg-2 col-md-3 col-sm-6">
-                <div class="footer__widget">
-                    <h6>Support</h6>
-                    <ul>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
-                <div class="footer__widget">
-                    <h6>{{ section.settings.newsletter_block_heading }}</h6>
-                    <div class="footer__newslatter">
-                        <p>{{ section.settings.newsletter_block_desc }}</p>
-                        {{#form 'newsletter'}}
-                        <input type="text" name="email" id="email" placeholder="Your email">
-                        <button type="submit"><span class="icon_mail_alt"></span></button>
-                        <div id="email_feedback" class="text-white"></div>
-                        {{/form}}
+                    <div class="qodef-grid-item">
+                        {{#ifCond store.navigations.footer_discovery_links '!==' undefined}}
+                        <div id="nav_menu-2" class="widget widget_nav_menu" data-area="qodef-footer-top-area-column-2">
+                            <h4 class="qodef-widget-title">Discover</h4>
+                            <div class="menu-footer-container">
+                                <ul id="menu-footer" class="menu">
+                                    {{#iterate store.navigations.footer_discovery_links }}
+                                    <li id="menu-item-2752"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2752">
+                                        <a href="{{current.url}}">{{current.name}}</a>
+                                    </li>
+                                    {{/iterate}}
+                                </ul>
+                            </div>
+                        </div>
+                        {{/ifCond}}
                     </div>
+                    <div class="qodef-grid-item">
+                        {{#ifCond store.navigations.footer_help_links '!==' undefined}}
+                        <div id="nav_menu-3" class="widget widget_nav_menu" data-area="qodef-footer-top-area-column-3">
+                            <h4 class="qodef-widget-title">Help &#038; Information</h4>
+                            <div class="menu-footer-2-container">
+                                <ul id="menu-footer-2" class="menu">
+                                    {{#iterate store.navigations.footer_help_links}}
+                                    <li id="menu-item-4120"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4120">
+                                        <a href="{{current.url}}">{{current.name}}</a>
+                                    </li>
+                                    {{/iterate}}
+                                </ul>
+                            </div>
+                        </div>
+                        {{/ifCond}}
+                    </div>
+                    <div class="qodef-grid-item">
+                        <div id="text-6" class="widget widget_text" data-area="qodef-footer-top-area-column-4">
+                            <h4 class="qodef-widget-title">Contact us</h4>
+                            <div class="textwidget">
+                                <p>For any additional questions feel free to contact us here</p>
+                            </div>
+                        </div>
+                        <div id="esmee_core_contact_form_7-2" class="widget widget_esmee_core_contact_form_7"
+                            data-area="qodef-footer-top-area-column-4">
+                            <div class="qodef-contact-form-7">
+                                <div role="form" class="wpcf7" id="wpcf7-f23-o1" lang="en-US" dir="ltr">
+                                    <div class="screen-reader-response">
+                                        <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                        <ul></ul>
+                                    </div>
+                                    {{#form "newsletter" }}
+                                    <div class="qodef-horizontal-form">
+                                        <span class="wpcf7-form-control-wrap" data-name="your-email">
+                                            <input type="email" name="your-email" value size="40"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" id="email"
+                                                aria-required="true" aria-invalid="false" placeholder="Your e-mail" />
+                                        </span>
+                                        <div class="qodef-inline-right qodef-ft-after">
+                                            <button type="submit"
+                                                class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m" id="signupButton">
+                                                <span class="qodef-m-text">&nbsp;</span>
+                                                {{{component "loader"}}}
+                                            </button>
+                                        </div>
+                                        <p class="qodef-m-text" id="email_feedback" style="margin-top: 15px; border: 2px solid aqua; padding: 5px;"></p>
+                                    </div>
+                                    <div class="wpcf7-response-output d-none" aria-hidden="true"></div>
+                                    {{/form}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <currency-switch class="qodef-grid-item" >
+                        <div id="text-6" class="widget widget_text" data-area="qodef-footer-top-area-column-4">
+                            <h4 class="qodef-widget-title">Switch Currency</h4>
+                        </div>
+                        <select id="currency-selector" variant="currency"
+                            name="currency" data-show_option_none="yes">
+                            {{#iterate store.currencies}}
+                            <option value="{{current.code}}" {{#ifCond current.index '==' 0}} hidden="true" {{/ifCond}} {{#ifCond current.code '==' currency.code}} selected="true" {{/ifCond}}>
+                                {{current.code}} {{{current.symbol}}}
+                            </option>
+                            {{/iterate}}
+                        </select>
+                    </currency-switch>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="footer__copyright__text">
-                    <p>Copyright ©
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                        All rights reserved | Powered by <a href="https://taojaa.com/" class="text-white"
-                            target="_blank">Taojaa</a>
-                    </p>
+    </div>
+    <div id="qodef-page-footer-bottom-area">
+        <div id="qodef-page-footer-bottom-area-inner" class="qodef-content-grid">
+            <div class="qodef-grid qodef-layout--columns qodef-responsive--custom qodef-col-num--1">
+                <div class="qodef-grid-inner clear">
+                    <div class="qodef-grid-item">
+                        <div id="text-7" class="widget widget_text" data-area="qodef-footer-bottom-area-column-1">
+                            <div class="textwidget">
+                                <p>© {{year}}<a href="{{store.website}}" rel="noopener">
+                                        {{store.name}}</a>, All Rights Reserved. <small>Powered by <a
+                                            href="https://taojaa.com" target="_blank">Taojaa</a></small></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+<a id="qodef-back-to-top" href="#" class="qodef--predefined">
+    <span class="qodef-back-to-top-icon">
+        <svg class="qodef-m-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" width="15px" height="21px" viewBox="0 0 15 21" enable-background="new 0 0 15 21"
+            xml:space="preserve">
+            <g>
+                <polyline stroke-miterlimit="10" points="0.3,7.932 7.5,0.732 14.7,7.932" />
+                <line stroke-miterlimit="10" x1="7.5" y1="0.796" x2="7.5" y2="21" />
+            </g>
+        </svg> </span>
+</a>
 
-<script src="{{asset_url}}/js/newsletter-modal.js" type="text/javascript"></script>
-
-<!-- Footer Section End -->
+<script type="text/javascript" src="{{asset_url}}/js/currency-switch.js"></script>

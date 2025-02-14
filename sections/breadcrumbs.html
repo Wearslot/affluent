@@ -1,27 +1,29 @@
-<!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-option">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__text">
-                    <h4>{{#ifCond current_page '==' 'collection'}} {{collection.name}} {{else}} {{title}} {{/ifCond}}
-                    </h4>
-                    <div class="breadcrumb__links">
-                        <a href="/">Home</a>
-                        {{#ifCond current_page '==' 'collection'}}
-                        <!-- <a href="/collections">Collections</a> -->
-                        <span>
-                            {{collection.name}}
-                        </span>
-                        {{else}}
-                        <span>
-                            {{title}}
-                        </span>
-                        {{/ifCond}}
-                    </div>
-                </div>
+<div
+    class="qodef-page-title qodef-m qodef-title--breadcrumbs qodef-alignment--right qodef-vertical-alignment--header-bottom">
+    <div class="qodef-m-inner">
+        <div class="qodef-m-content qodef-content-grid ">
+            <div itemprop="breadcrumb" class="qodef-breadcrumbs">
+                <a itemprop="url" class="qodef-breadcrumbs-link" href="/">
+                    <span itemprop="title">Home</span>
+                </a>
+                {{#ifCond current_page '==' 'product-detail'}}
+                {{#ifCond product.collection '!=' null}}
+                <span class="qodef-breadcrumbs-separator"></span>
+                <a itemprop="url" class="qodef-breadcrumbs-link" href="/collections/{{product.collection.slug}}">
+                    <span itemprop="title">{{product.collection.name}}</span>
+                </a>
+                {{/ifCond}}
+                <span class="qodef-breadcrumbs-separator"></span>
+                <span itemprop="title" class="qodef-breadcrumbs-current">{{product.name}}</span>
+                {{else}}
+                <span class="qodef-breadcrumbs-separator"></span>
+                <span itemprop="title" class="qodef-breadcrumbs-current">
+                    {{#ifCond current_page '==' 'shop'}} Shop All {{/ifCond}}
+                    {{#ifCond collection '!==' undefined}} {{collection.name}} {{/ifCond}}
+                    {{#ifCond current_page '==' 'cart'}} Cart {{/ifCond}}
+                </span>
+                {{/ifCond}}
             </div>
         </div>
     </div>
-</section>
-<!-- Breadcrumb Section End -->
+</div>

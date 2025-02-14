@@ -28,12 +28,12 @@ visibility: visible !important;
                         <div class="qodef-drop-down-second">
                             <div class="qodef-drop-down-second-inner">
                                 <ul class="sub-menu">
-                                    {{#each store.collections}}
-                                    {{#ifCond this.categories.length '>' 0}}
+                                    {{#iterate collections}}
+                                    {{#ifCond current.categories.length '>' 0}}
                                     <li
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-96">
-                                        <a href="/collection/{{this.slug}}"><span
-                                                class="qodef-menu-item-text">{{this.name}}<svg
+                                        <a href="/collection/{{current.slug}}"><span
+                                                class="qodef-menu-item-text">{{current.name}}<svg
                                                     class="qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
                                                     viewBox="0 0 32 32">
@@ -44,22 +44,22 @@ visibility: visible !important;
                                                     </g>
                                                 </svg></span></a>
                                         <ul class="sub-menu">
-                                            {{#each this.categories}}
+                                            {{#each current.categories}}
                                             <li
                                                 class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2405">
-                                                <a href="{{this.slug}}"><span
-                                                        class="qodef-menu-item-text">{{this.name}}</span></a>
+                                                <a href="{{current.slug}}"><span
+                                                        class="qodef-menu-item-text">{{current.name}}</span></a>
                                             </li>
                                             {{/each}}
                                         </ul>
                                     </li>
                                     {{else}}
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2408">
-                                        <a href="/collection/{{this.slug}}"><span
-                                                class="qodef-menu-item-text">{{this.name}}</span></a>
+                                        <a href="/collection/{{current.slug}}"><span
+                                                class="qodef-menu-item-text">{{current.name}}</span></a>
                                     </li>
                                     {{/ifCond}}
-                                    {{/each}}
+                                    {{/iterate}}
                                 </ul>
                             </div>
                         </div>
@@ -204,10 +204,6 @@ visibility: visible !important;
             </div>
         </div>
     </div>
-
-    {{#widget name='banner' widget=section.widgets.banner}}
-        <p>{{ widget.settings.text }}</p>
-    {{/widget}}
 
     {{#form 'search' 'class="qodef-search-cover-form"'}}
     <div class="qodef-m-inner">

@@ -1,151 +1,63 @@
 {{#if similar_products}}
-<section class="related spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="related-title">Related Product</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
-                        <span class="label">New</span>
-                        <ul class="product__hover">
-                            <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                            <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
-                        </ul>
+<section class="related products">
+    <h2>{{section.settings.title}}</h2>
+    <div class="qodef-woo-product-list qodef-item-layout--info-below">
+        <ul class="products columns-4">
+            {{#iterate similar_products limit=4}}
+            <li
+                class="product type-product post-851 status-publish first instock product_cat-jewelry product_tag-city product_tag-timeless has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                <div class="qodef-e-inner">
+                    <div class="qodef-woo-product-image"><img width="600" height="780" src="{{current.image.main}}"
+                            class="attachment-taojaa_thumbnail size-taojaa_thumbnail" alt="f" decoding="async"
+                            loading="lazy"
+                            srcset="{{current.image.main}} 600w, {{current.image.main}} 231w, {{current.image.main}} 788w, {{current.image.main}} 768w, {{current.image.main}} 800w"
+                            sizes="(max-width: 600px) 100vw, 600px" />
+                        <div class="qodef-woo-product-image-inner">
+
+                            <div class="qodef-additional-content">
+                                <div
+                                    class="yith-wcwl-add-to-wishlist add-to-wishlist-851  wishlist-fragment on-first-load">
+                                    <!-- <div class="yith-wcwl-add-button">
+                                        <a href="index6516.html?add_to_wishlist=851&amp;_wpnonce=a124fad9de"
+                                            class="add_to_wishlist single_add_to_wishlist" data-product-type="simple" 
+                                            data-title="Add to wishlist" rel="nofollow">
+                                            <i class="yith-wcwl-icon fa fa-heart-o"></i> <span>Add to wishlist</span>
+                                        </a>
+                                    </div> -->
+                                </div>
+                                <a href="#" class="button yith-wcqv-button quick-view-btn" data-slug="{{current.slug}}">
+                                    <i class="yith-wcwl-icon fa fa-eye" style="padding-bottom: 5px;" data-slug="{{current.slug}}">
+                                        <span data-slug="{{current.slug}}">Quick View</span>
+                                    </i>
+                                </a>
+                            </div>
+                        </div><a href="/product/{{current.slug}}"
+                            class="taojaa-LoopProduct-link taojaa-loop-product__link"></a>
                     </div>
-                    <div class="product__item__text">
-                        <h6>Piqué Biker Jacket</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
-                        <div class="rating">
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
+                    <div class="qodef-woo-product-content">
+                        <div class="qodef-woo-product-content-top">
+                            <h4 class="qodef-woo-product-title taojaa-loop-product__title">
+                                <a href="/product/{{current.slug}}"
+                                    class="taojaa-LoopProduct-link taojaa-loop-product__link">{{current.name}}</a>
+                            </h4>
+                            <div class="qodef-woo-product-categories qodef-e-info">
+                                <a href="/collection/{{current.collection.slug}}" rel="tag">{{current.collection.name}}</a>
+                                <div class="qodef-info-separator-end"></div>
+                            </div>
                         </div>
-                        <h5>$67.24</h5>
-                        <div class="product__color__select">
-                            <label for="pc-1">
-                                <input type="radio" id="pc-1">
-                            </label>
-                            <label class="active black" for="pc-2">
-                                <input type="radio" id="pc-2">
-                            </label>
-                            <label class="grey" for="pc-3">
-                                <input type="radio" id="pc-3">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
-                        <ul class="product__hover">
-                            <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                            <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6>Piqué Biker Jacket</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
-                        <div class="rating">
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div>
-                        <h5>$67.24</h5>
-                        <div class="product__color__select">
-                            <label for="pc-4">
-                                <input type="radio" id="pc-4">
-                            </label>
-                            <label class="active black" for="pc-5">
-                                <input type="radio" id="pc-5">
-                            </label>
-                            <label class="grey" for="pc-6">
-                                <input type="radio" id="pc-6">
-                            </label>
-                        </div>
+                        <span class="price"><span class="taojaa-Price-amount amount">
+                                <bdi>
+                                    <span class="taojaa-Price-currencySymbol"></span>{{{product_price current}}}
+                                </bdi>
+                            </span>
+                        </span>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                <div class="product__item sale">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
-                        <span class="label">Sale</span>
-                        <ul class="product__hover">
-                            <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                            <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6>Multi-pocket Chest Bag</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div>
-                        <h5>$43.48</h5>
-                        <div class="product__color__select">
-                            <label for="pc-7">
-                                <input type="radio" id="pc-7">
-                            </label>
-                            <label class="active black" for="pc-8">
-                                <input type="radio" id="pc-8">
-                            </label>
-                            <label class="grey" for="pc-9">
-                                <input type="radio" id="pc-9">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
-                        <ul class="product__hover">
-                            <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                            <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6>Diagonal Textured Cap</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
-                        <div class="rating">
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div>
-                        <h5>$60.9</h5>
-                        <div class="product__color__select">
-                            <label for="pc-10">
-                                <input type="radio" id="pc-10">
-                            </label>
-                            <label class="active black" for="pc-11">
-                                <input type="radio" id="pc-11">
-                            </label>
-                            <label class="grey" for="pc-12">
-                                <input type="radio" id="pc-12">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </li>
+            {{/iterate}}
+        </ul>
     </div>
 </section>
 {{/if}}
+
+<script type="text/javascript" src="{{asset_url}}/js/quick-view.js"></script>

@@ -1,88 +1,15 @@
-<!-- Header Section Begin -->
-<header class="header">
+{{#styles}}
+.d-none {
+display: none !important;
+}
+.d-block {
+display: block !important;
+}
+{{/styles}}
 
-    <div class="header__top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-7">
-                    {{#widget name="announcement"}}
-                    <div class="header__top__left">
-                        <p>{{ widget.settings.text }}</p>
-                    </div>
-                    {{/widget}}
-                </div>
-                <div class="col-lg-6 col-md-5">
-                    <div class="header__top__right">
-                        <div class="header__top__links">
-                            <!-- <a href="#">Sign in</a> -->
-                            <!-- <a href="#">FAQs</a> -->
-                        </div>
-                        <div class="header__top__hover">
-                            <span>{{currency.code}} <i class="arrow_carrot-down"></i></span>
-                            <ul style="max-height: 350px; overflow: auto;">
-                                {{#iterate currencies}}
-                                <li style="text-align: left;" data-currency="{{ current.code }}">{{ current.name }}
-                                    ({{current.code }})</li>
-                                {{/iterate}}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="header-group">
+    {{{render "main-header"}}}
+    {{{render "main-mobile-header"}}}
+</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3">
-                <div class="header__logo">
-                    <a href="/"><img src="{{store.logo}}" alt=""></a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                {{#widget name="navigation" as="navigation"}}
-
-                <nav class="header__menu mobile-menu">
-                    <ul>
-                        {{#iterate store.navigations.header_menu}}
-
-                        <li class="">
-                            <a href="{{current.url}}">{{ current.name }}</a>
-                        </li>
-
-                        {{#ifCond current.index '==' 1 }}
-                        {{#ifCond section.settings.show_collection_dropdown '==' true}}
-                        <li><a href="#">Categories</a>
-                            <ul class="dropdown">
-                                {{#iterate collections as="collection"}}
-                                <li><a href="/collection/{{ collection.slug }}">{{ collection.name }}</a></li>
-                                {{/iterate}}
-                            </ul>
-                        </li>
-                        {{/ifCond}}
-                        {{/ifCond}}
-
-                        {{/iterate}}
-                    </ul>
-                </nav>
-                {{/widget}}
-            </div>
-            <div class="col-lg-3 col-md-3">
-                <div class="header__nav__option">
-                    <a href="#" class="search-switch"><img src="{{asset_url}}/img/icon/search.png" alt=""></a>
-                    {{{ component "cart-summary" }}}
-                </div>
-            </div>
-        </div>
-        <div class="canvas__open"><i class="fa fa-bars"></i></div>
-    </div>
-</header>
-
-<script type="text/javascript">
-    document.querySelectorAll("[data-currency]").forEach(element => {
-        element.addEventListener("click", (e) => {
-            window.location = window.location.href + `?currency=${e.target.getAttribute('data-currency')}`
-        })
-    })
-</script>
-<!-- Header Section End -->
+{{{render "sidebar-area"}}}

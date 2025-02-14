@@ -1,4 +1,4 @@
-- {{{ money cart.discount.amount}}}
-{{#ifCond cart.discount.type '==' 'percentage'}} 
-    (<strong>{{percentage cart.discount.value}}</strong>) discount
-{{/ifCond}}
+<bdi>
+    - <span class="taojaa-Price-currencySymbol">{{{currency.symbol}}}</span>{{cart.discount.amount}}
+    {{#ifCond cart.discount.type '==' 'percentage'}} (<strong>{{percentage cart.discount.value}}</strong>) discount {{/ifCond}}
+</bdi>

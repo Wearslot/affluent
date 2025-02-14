@@ -1,16 +1,9 @@
 {
-    "layout": "main",
+    "layout": "catalogs",
     "sections": {
         "catalogs": {
-            "type": "catalog",
-            "settings": {},
-            "widgets": {
-                "breadcrumb": {
-                    "settings": {
-                        "title": "Shop"
-                    }
-                }
-            }
+            "type": "shop/four-columns",
+            "settings": {}
         }
     },
     "order": [

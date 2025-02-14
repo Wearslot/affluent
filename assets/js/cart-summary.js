@@ -4,14 +4,14 @@ if (!customElements.get('cart-summary')) {
             super();
 
             this.cart = document.querySelector('cart-items');
-            // this.addRemoveItemFormsEventListener();
+            this.addRemoveItemFormsEventListener();
         }
 
-        // addRemoveItemFormsEventListener() {
-        //     this.removeForms = this.querySelectorAll('[form-id="remove_item_form"]').forEach(form => {
-        //         form.addEventListener("submit", this.removeItemFromCart.bind(this));
-        //     });
-        // }
+        addRemoveItemFormsEventListener() {
+            this.removeForms = this.querySelectorAll('[form-id="remove_item_form"]').forEach(form => {
+                form.addEventListener("submit", this.removeItemFromCart.bind(this));
+            });
+        }
 
         removeItemFromCart(event) {
             event.preventDefault();
@@ -57,13 +57,9 @@ if (!customElements.get('cart-summary')) {
 
         getAffectedComponents() {
             return [
-                // {
-                //     id: "cart-summary",
-                //     selector: ".cart-summary"
-                // },
                 {
-                    id: "cart-subtotal-amount",
-                    selector: ".cart-subtotal-amount"
+                    id: "cart-summary",
+                    selector: ".cart-summary-wrapper"
                 },
                 {
                     id: "cart-count",
