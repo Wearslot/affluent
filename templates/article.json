@@ -1,12 +1,8 @@
 {
-    "layout": "main",
-    "sections": {
-        "article": {
-            "type": "article",
-            "settings": {
-                
-            }
-        }
-    },
-    "order": []
+    "layout": "",
+    "sections": {},
+    "order": [],
+    "data": {
+        "collections": true
+    }
 }

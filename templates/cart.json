@@ -1,5 +1,5 @@
 {
-    "layout": "main",
+    "layout": "catalogs",
     "sections": {
         "main-cart": {
             "type": "main-cart",

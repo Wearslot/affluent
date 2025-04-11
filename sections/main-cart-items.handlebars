@@ -1,0 +1,125 @@
+<cart-items>
+    <table class="shop_table shop_table_responsive cart taojaa-cart-form__contents" cellspacing="0">
+        <thead>
+            <tr>
+                <th class="product-remove"><span class="screen-reader-text">Remove
+                        item</span></th>
+                <th class="product-thumbnail"><span class="screen-reader-text">Thumbnail
+                        image</span></th>
+                <th class="product-name">Product</th>
+                <th class="product-price">Price</th>
+                <th class="product-quantity">Quantity</th>
+                <th class="product-subtotal">Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{#iterate cart.items}}
+            <tr class="taojaa-cart-form__cart-item cart_item qodef-product-type-product"
+                id="cart-item-{{add current.index 1}}">
+
+                <td class="product-remove">
+                    <cart-remove-button>
+                        <a href="/cart/update?line={{add current.index 1}}&quantity=0"
+                            data-line="{{add current.index 1}}" class="remove cart-remove-btn"
+                            aria-label="Remove current item">×</a>
+                    </cart-remove-button>
+                </td>
+
+                <td class="product-thumbnail">
+                    <a href="{{current.url}}">
+                        <img decoding="async" width="600" height="780" src="{{current.image}}"
+                            class="attachment-taojaa_thumbnail size-taojaa_thumbnail" alt="j"
+                            srcset="{{current.image}} 600w, {{current.image}} 231w, {{current.image}} 788w, {{current.image}} 768w, {{current.image}} 800w"
+                            sizes="(max-width: 600px) 100vw, 600px">
+                    </a>
+                </td>
+
+                <td class="product-name" data-title="Product">
+                    <a href="{{current.url}}">{{current.title}} –
+                        {{current.selected_options_title}}
+                    </a>
+                </td>
+
+                <td class="product-price" data-title="Price">
+                    <span class="taojaa-Price-amount amount">
+                        <bdi>
+                            <span class="taojaa-Price-currencySymbol">{{{currency.symbol}}}</span>{{current.sale_price}}
+                        </bdi>
+                    </span>
+                </td>
+
+                <td class="product-quantity" data-title="Quantity">
+                    <quantity-field>
+                        <div class="qodef-quantity-buttons quantity">
+                            <label class="screen-reader-text" for="quantity_663a13c193f55">
+                                {{current.title}} – {{current.selected_options_title}}
+                            </label>
+                            <span class="qodef-quantity-minus minus"></span>
+                            <input type="text" id="cart-item__quantity_{{current.id}}"
+                                data-line="{{add current.index 1}}"
+                                class="input-text qty text qodef-quantity-input cart-item__quantity"
+                                data-step="{{current.default_or_selected_variant.quantity_rule.step}}"
+                                data-min="{{current.default_or_selected_variant.quantity_rule.min}}"
+                                data-max="{{current.default_or_selected_variant.quantity_rule.max}}" name="quantity[]"
+                                value="{{current.quantity}}" title="Qty" placeholder="" inputmode="numeric">
+                            <span class="qodef-quantity-plus plus"></span>
+                        </div>
+                    </quantity-field>
+                </td>
+
+                <td class="product-subtotal" data-title="Subtotal">
+                    {{{component "loader"}}}
+                    <span class="taojaa-Price-amount amount" id="cart-item__subtotal-{{add current.index 1}}">
+                        {{{component "cart-item-subtotal" item=current}}}
+                    </span>
+                </td>
+            </tr>
+            {{/iterate}}
+
+
+            <tr>
+                <td colspan="6" class="actions">
+
+                    <discount-remove class="{{#ifCond cart.discount_applied '!=' true}} d-none {{/ifCond}}">
+                        {{#form 'remove-coupon'}}
+                        <div class="coupon" style="align-items: center;">
+                            <div class="applied-coupon-wrapper" style="margin-right: 15px;">
+                                {{{component 'applied-coupon'}}}
+                            </div>
+                            <button type="submit" class="button" name="remove_coupon" value="Remove coupon">
+                                <span class="button_text">Remove coupon</span>
+                                {{{component 'loader'}}}
+                            </button>
+                        </div>
+                        {{/form}}
+                    </discount-remove>
+
+                    <discount-apply class="{{#ifCond cart.discount_applied '==' true}} d-none {{/ifCond}}">
+                        {{#form "apply-coupon"}}
+
+                        <div class="error {{#ifCond errors.coupon '===' undefined}} d-none {{/ifCond}}">
+                            <p class="error-message">{{errors.coupon}}</p>
+                        </div>
+
+                        <div class="coupon">
+                            <label for="coupon">Coupon:</label>
+                            <input type="text" name="coupon" class="input-text" id="coupon" value=""
+                                placeholder="Coupon code">
+                            <button type="submit" class="button" name="apply_coupon" value="Apply coupon">
+                                <span class="button_text">Apply coupon</span>
+                                {{{component 'loader'}}}
+                            </button>
+                        </div>
+                        {{/form}}
+                    </discount-apply>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</cart-items>
+
+<script type="text/javascript" src="{{asset_url}}/js/cart.js"></script>
+<script type="text/javascript" src="{{asset_url}}/js/quantity-field.js"></script>
+<script type="text/javascript" src="{{asset_url}}/js/discount.js"></script>

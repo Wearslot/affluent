@@ -1,30 +1,21 @@
 {
     "sections": {
+        "announcement": {
+            "type": "announcement",
+            "settings": {
+                "show": false
+            }
+        },
         "header": {
             "type": "header",
-            "widgets": {
-                "header_top": {
-                    "settings": {
-                        "show": true
-                    }
-                },
-                "announcement": {
-                    "settings": {
-                        "text": "Free shipping, 30-day return or refund guarantee."
-                    }
-                },
-                "navigation": {
-                    "type": "navigation",
-                    "handle": "header_menu",
-                    "settings": {}
-                }
-            },
-            "settings": {
-                "show_collection_dropdown": true
-            }
+            "available_types": [
+                "header"
+            ],
+            "settings": {}
         }
     },
     "order": [
+        "announcement",
         "header"
     ]
 }

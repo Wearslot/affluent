@@ -13,16 +13,6 @@
                 "type": "text",
                 "value": "get 15% off"
             } 
-        },
-        "footer": {
-            "text_color": {
-                "type": "color",
-                "value": ""
-            },
-            "background_color": {
-                "type": "color",
-                "value": ""
-            }
         }
     }
 }
